@@ -12,7 +12,6 @@ public class FileHandler {
 	private String filename;
 	private static BufferedReader buffReader = null;
 	
-	
 
 	// Singleton Model
 	private static FileHandler fHandler = null;
