@@ -28,6 +28,7 @@ public class Graph {
 	
 	
 	public void addNode(Node n) {
+		if (!adjNodes.containsKey(n))
 			adjNodes.putIfAbsent( n, new ArrayList<>());
 	}
 	
