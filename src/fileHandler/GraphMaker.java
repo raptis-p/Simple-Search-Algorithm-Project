@@ -3,6 +3,9 @@ package fileHandler;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import graph.Edge;
 import graph.Graph;
@@ -13,6 +16,11 @@ public class GraphMaker {
 	
 	BufferedReader rdr = null;
 	FileHandler fH = null;
+	
+	private Map<String, String[]>  predictions; //String day to String[roadname,traffic] or String roadname to String [day,traffic]
+	private Map<String, String[]>  actualTraffic; //same logic as above
+	
+	
 	//Constructor of GraphMaker
 	public GraphMaker(String filename) throws FileNotFoundException {
 		FileHandler fH = FileHandler.getFileHandler(filename);
@@ -53,7 +61,7 @@ public class GraphMaker {
 				isPredictions= true;
 		
 				while (isPredictions) {
-				
+					
 				
 					if (data[1].equals("/Predictions")) {
 						isPredictions = false;
