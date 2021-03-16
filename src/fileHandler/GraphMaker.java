@@ -28,6 +28,7 @@ public class GraphMaker {
 		rdr = FileHandler.getBuffReader();
 	}
 	
+	
 	public Graph createGraph() throws IOException {
 		Graph g = new Graph();
 		boolean isRoads,isPredictions,isTraffic = false;
