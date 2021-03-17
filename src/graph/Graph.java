@@ -32,6 +32,12 @@ public class Graph {
 			adjNodes.putIfAbsent( n, new ArrayList<>());
 	}
 	
+	public void addAdjNode(Node n1, Node n2) {
+		if (this.adjNodes.get(n1).isEmpty()) {
+			this.adjNodes.put(n1, new ArrayList<Node>());
+		}
+		this.adjNodes.get(n1).add(n2);
+	}
 	
 	
 	//Setters-Getters
