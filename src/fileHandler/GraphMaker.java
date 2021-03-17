@@ -31,7 +31,7 @@ public class GraphMaker {
 	
 	public Graph createGraph() throws IOException {
 		Graph g = new Graph();
-		boolean isRoads,isPredictions,isTraffic = false;
+		boolean isRoads = false,isPredictions = false ,isTraffic = false;
 		
 		String line;
 		
@@ -43,13 +43,24 @@ public class GraphMaker {
 			
 			case "Source" :
 				g.addNode(new Node(data[2], true, false));
+				
+				break;
 			case "Destination" :
 				g.addNode(new Node(data[2], false, true));
+				
+				break;
 			case "Roads" :   //start roads reading
+				
 				isRoads=true;
 				while (isRoads) {
 					//read roads
-					Edge e = new Edge(data[0],new Node(data[1]),new Node(data[2]),data[3]);
+					System.out.println(data[0]);
+					System.out.println(data[1]);
+					System.out.println(data[2]);
+					System.out.println(data[3]);
+					
+					Edge e = new Edge(data[0],new Node(data[1]),new Node(data[2]),data[3]); //not working
+					
 					g.addNode(new Node(data[1]));
 					g.addNode(new Node(data[2]));
 					g.addEdge(e);
@@ -58,6 +69,8 @@ public class GraphMaker {
 						isRoads = false;
 					}
 				}
+				
+				break;
 			case "Predictions" :  //predictions reading per day
 				isPredictions= true;
 		
@@ -68,6 +81,7 @@ public class GraphMaker {
 						isPredictions = false;
 					}
 			}
+				break;
 			case "ActualTrafficPerDay" :  //actual traffic reading per day
 				isTraffic= true;
 		
@@ -78,7 +92,7 @@ public class GraphMaker {
 						isTraffic = false;
 					}
 			}
-			
+				break;
 		}
 	
 	}
