@@ -1,15 +1,17 @@
 package fileHandler;
 
+import graph.Edge;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import graph.Edge;
 import graph.Graph;
 import graph.Node;
+import graph.Prediction;
 
 public class GraphMaker {
 
@@ -17,8 +19,8 @@ public class GraphMaker {
 	BufferedReader rdr = null;
 	FileHandler fH = null;
 	
-	private Map<String, String[]>  predictions; //String day to String[roadname,traffic] or String roadname to String [day,traffic] 
-	private Map<String, String[]>  actualTraffic; //same logic as above
+	
+	
 	
 	
 	//Constructor of GraphMaker
@@ -34,9 +36,11 @@ public class GraphMaker {
 		boolean isRoads = false,isPredictions = false ,isTraffic = false,isDay = false;
 		
 		String line;
-		String d_temp = "Day";
+		
 		Node n1,n2;
-		int daysCount = 1;
+		int daysCount = 0, t;
+		String rn;
+		
 		
 		while ((line=rdr.readLine() )!=null)  {	
 			
@@ -70,11 +74,12 @@ public class GraphMaker {
 				break;
 
 			case "Day" :   //start roads reading
+				g.initDayPred(daysCount);
 				isDay=true;
 				break;
 			case "/Day" : 
 				isDay = false;
-				d_temp += Integer.toString(daysCount);
+				
 				daysCount++;
 				break;
 			default :
@@ -96,6 +101,17 @@ public class GraphMaker {
 					
 				}
 				else if (isPredictions) {
+					rn = data[0];
+					if (data[1].equals(" low")) {
+						t = -1;
+					}
+					else if (data[1].equals(" normal")) {
+						t = 0;
+					} else {
+						t= 1;
+					}
+					g.addPrediction(daysCount, rn, t);
+					
 					
 				}
 				else if (isTraffic) {
@@ -161,6 +177,11 @@ public class GraphMaker {
 	public void setfH(FileHandler fH) {
 		this.fH = fH;
 	}
+
+
+	
+
+
 	
 	
 	

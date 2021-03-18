@@ -10,8 +10,10 @@ import java.util.Set;
 import java.util.stream.Stream;
 
 import fileHandler.GraphMaker;
+import graph.Edge;
 import graph.Graph;
 import graph.Node;
+import graph.Prediction;
 
 
 //Passing filename as argument while running program
@@ -27,15 +29,30 @@ public class MainClass {
 		
 		myGraph = gM.createGraph();
 		
-		
-		for(Node n:myGraph.getAdjNodes().keySet()) {
-			System.out.println("-----------------");
-			System.out.println("start"+n.getName());
-			
-			for(Node n2:myGraph.getAdjNodes().get(n)) {
-				System.out.println(n2.getName());
-			}
-		}	
-
+//		
+//		for(Node n:myGraph.getAdjNodes().keySet()) {
+//			System.out.println("-----------------");
+//			System.out.println("start"+n.getName());
+//			Edge e1 = null;
+//			for(Node n2:myGraph.getAdjNodes().get(n)) {
+//				for (Edge e : myGraph.getEdgesList()) {
+//					if (e.getSrcNode().getName().equals(n.getName()) && e.getDestNode().getName().equals(n2.getName())) {
+//						System.out.println("Goes to : " + n2.getName() + " with road " + e.getRoadName());
+//					}
+//					
+//				}
+//				
+//				
+//			}
+//		}	
+//
+//		for (int day=0;day<2;day++) {
+//		for (Prediction p : myGraph.getPredictions().get(day)) {
+//			System.out.println("Road : " + p.getRoadName() +" will have traffic " + p.getTraffic());
+//		}
+//		}
+//		
+//		
 	}
 }
+

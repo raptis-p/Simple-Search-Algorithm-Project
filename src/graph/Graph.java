@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
+import graph.Edge;
 
 public class Graph {
 
@@ -14,6 +15,11 @@ public class Graph {
 	private Map<Node, List <Node>> adjNodes;
 	private List<Edge> edgesList;
 
+	
+	
+
+	private Map<Integer,List<Prediction>> predictions = new HashMap<Integer,List<Prediction>>(); ;//day at index, list of predictions in list
+	private Map<Integer,List<Prediction>> actualTraffic; // either map or class ActualTraffic !!!!!!!!!
 
 	//Constructor
 	public Graph() {
@@ -63,9 +69,24 @@ public class Graph {
 //			this.adjNodes.get(list).add(n2) ;
 //		}
 
+	public void initDayPred(int day) {
+		this.predictions.put(day, new ArrayList<Prediction>());
+	}
+	
+	public void addPrediction(int day, String rn, int tr) {
 		
-	
-	
+
+		
+		for (int d : this.predictions.keySet()) {
+			if(day == d) {
+				
+				this.predictions.get(d).add(new Prediction(rn, tr)) ;
+			}			
+		}
+		
+
+		
+	}
 	
 	
 	
@@ -92,7 +113,29 @@ public class Graph {
 		this.edgesList = edgesList;
 	}
 
-	
+	public Map<Integer, List<Prediction>> getPredictions() {
+		return predictions;
+	}
+
+
+
+	public void setPredictions(Map<Integer, List<Prediction>> predictions) {
+		this.predictions = predictions;
+	}
+
+
+
+	public Map<Integer, List<Prediction>> getActualTraffic() {
+		return actualTraffic;
+	}
+
+
+
+	public void setActualTraffic(Map<Integer, List<Prediction>> actualTraffic) {
+		this.actualTraffic = actualTraffic;
+	}
+
+
 	
 	
 }
