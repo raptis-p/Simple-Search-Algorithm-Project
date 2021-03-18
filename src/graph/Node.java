@@ -12,16 +12,19 @@ public class Node {
 		this.name = name;
 		this.isSrc = false;
 		this.isGoal = false;
+		
 	}
 	
 	public Node(String name,boolean src, boolean goal) {
-		this.name = name;
+		this.name =" "+name;
 		this.isSrc = src;
 		this.isGoal = goal;
+	
 	}
 	
 	
 	public boolean equals(Node n) {
+	
 		if (this.name.equals(n.name)) {
 			return true;
 		}

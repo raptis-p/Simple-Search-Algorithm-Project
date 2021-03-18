@@ -84,9 +84,11 @@ public class GraphMaker {
 					n2 = new Node(data[2]);
 					
 					Edge e = new Edge(data[0],n1,n2,data[3]); 
-					
+
 					g.addNode(n1);
 					g.addNode(n2);
+					
+
 					
 					g.addAdjNode(n1, n2);
 					

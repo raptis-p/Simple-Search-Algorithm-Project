@@ -2,8 +2,11 @@ package graph;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 
 public class Graph {
 
@@ -28,16 +31,51 @@ public class Graph {
 	
 	
 	public void addNode(Node n) {
-		if (!adjNodes.containsKey(n))
-			adjNodes.putIfAbsent( n, new ArrayList<>());
+		boolean flag=false;
+		
+		for (Node n1:this.adjNodes.keySet()) {
+			if(n1.equals(n)) {
+				flag=true;
+			}
+		}
+		if(flag==false) {
+			this.adjNodes.put(n, new ArrayList<Node>());
+		}
+		
 	}
 	
+	
 	public void addAdjNode(Node n1, Node n2) {
-		if (this.adjNodes.get(n1).isEmpty()) {
-			this.adjNodes.put(n1, new ArrayList<Node>());
+		
+		for (Node help:this.adjNodes.keySet()) {
+			if(n1.equals(help)) {
+				this.adjNodes.get(n1).add(n2);
+				this.adjNodes.get(n1).add(n2);
+				this.adjNodes.get(n1).add(n2);
+			}
 		}
-		this.adjNodes.get(n1).add(n2);
+//		
+		
+		boolean flag=false;
+		
+		if( this.adjNodes.get(n1).isEmpty()){
+			this.adjNodes.put(n1,new ArrayList<Node>());
+		}
+		for (Node list:this.adjNodes.get(n1)) {
+			if(list.equals(n2)) {
+				flag=true;
+				
+			}
+		}
+		
+		if(flag==false) {
+			this.adjNodes.get(n1).add(n2) ;
+		}
+		
 	}
+	
+	
+	
 	
 	
 	//Setters-Getters
