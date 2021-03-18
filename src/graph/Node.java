@@ -16,14 +16,12 @@ public class Node {
 		this.name = name;
 		this.isSrc = false;
 		this.isGoal = false;
-		g.getAdjNodes().put(this, new ArrayList<Node>());
 	}
 	
 	public Node(String name,boolean src, boolean goal,Graph g) {
 		this.name =" "+name;
 		this.isSrc = src;
 		this.isGoal = goal;
-		g.getAdjNodes().put(this, new ArrayList<Node>());
 	}
 	
 	

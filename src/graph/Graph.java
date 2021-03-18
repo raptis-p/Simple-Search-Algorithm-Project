@@ -32,47 +32,39 @@ public class Graph {
 	
 	public void addNode(Node n) {
 		boolean flag=false;
-		
 		for (Node n1:this.adjNodes.keySet()) {
-			if(n1.equals(n)) {
+			if(n1.getName().equals(n.getName())) {
 				flag=true;
 			}
 		}
 		if(flag==false) {
 			this.adjNodes.put(n, new ArrayList<Node>());
+		}else {
 		}
+		
 		
 	}
 	
 	
-	public void addAdjNode(Node n1, Node n2) {
-		
-		for (Node help:this.adjNodes.keySet()) {
-			if(n1.equals(help)) {
-				this.adjNodes.get(n1).add(n2);
-				this.adjNodes.get(n1).add(n2);
-				this.adjNodes.get(n1).add(n2);
-			}
-		}
-//		
-		
+	public void addAdjNode(Node n1, Node n2) {		
 		boolean flag=false;
 		
-		if( this.adjNodes.get(n1).isEmpty()){
-			this.adjNodes.put(n1,new ArrayList<Node>());
-		}
-		for (Node list:this.adjNodes.get(n1)) {
-			if(list.equals(n2)) {
+		for (Node list:this.adjNodes.keySet()) {
+			if(n1.getName().equals(list.getName())) {
 				flag=true;
+				this.adjNodes.get(list).add(n2) ;
+			}			
+		}
 				
-			}
-		}
-		
-		if(flag==false) {
-			this.adjNodes.get(n1).add(n2) ;
-		}
-		
 	}
+		
+		
+//		if(flag==false) {
+//			this.adjNodes.get(list).add(n2) ;
+//		}
+
+		
+	
 	
 	
 	

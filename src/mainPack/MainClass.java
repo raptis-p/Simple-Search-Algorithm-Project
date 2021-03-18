@@ -28,10 +28,12 @@ public class MainClass {
 		myGraph = gM.createGraph();
 		
 		
-		for(Map.Entry<Node, List<Node>> e : myGraph.getAdjNodes().entrySet()){
-				System.out.println(e.getKey().getName()+" = ");
-			    for(Node e1 : e.getValue()){
-			      System.out.println(e1.getName());			
+		for(Node n:myGraph.getAdjNodes().keySet()) {
+			System.out.println("-----------------");
+			System.out.println("start"+n.getName());
+			
+			for(Node n2:myGraph.getAdjNodes().get(n)) {
+				System.out.println(n2.getName());
 			}
 		}	
 
