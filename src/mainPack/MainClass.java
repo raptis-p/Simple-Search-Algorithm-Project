@@ -30,9 +30,9 @@ public class MainClass {
 		
 		for(Map.Entry<Node, List<Node>> e : myGraph.getAdjNodes().entrySet()){
 				System.out.println(e.getKey().getName()+" = ");
-			   // for(Node e1 : e.getValue()){
-			      //System.out.println(e1.getName());			
-			//}
+			    for(Node e1 : e.getValue()){
+			      System.out.println(e1.getName());			
+			}
 		}	
 
 	}

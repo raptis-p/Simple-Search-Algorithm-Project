@@ -45,10 +45,10 @@ public class GraphMaker {
 			switch(data[1]) {
 			
 			case "Source" :
-				g.addNode(new Node(data[2], true, false));
+				g.addNode(new Node(data[2], true, false,g));
 				break;
 			case "Destination" :
-				g.addNode(new Node(data[2], false, true));
+				g.addNode(new Node(data[2], false, true,g));
 				break;
 			case "Roads" :   //start roads reading
 				isRoads=true;
@@ -80,8 +80,8 @@ public class GraphMaker {
 			default :
 				
 				if (isRoads) {
-					n1 = new Node(data[1]);
-					n2 = new Node(data[2]);
+					n1 = new Node(data[1],g);
+					n2 = new Node(data[2],g);
 					
 					Edge e = new Edge(data[0],n1,n2,data[3]); 
 
