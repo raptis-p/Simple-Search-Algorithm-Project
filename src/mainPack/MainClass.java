@@ -47,13 +47,13 @@ public class MainClass {
 //			}
 //		}	
 //
-//		for (int day=0;day<2;day++) {
-//		for (Prediction p : myGraph.getPredictions().get(day)) {
-//			System.out.println("Road : " + p.getRoadName() +" will have traffic " + p.getTraffic());
-//		}
-//		}
-//		
-//		
+		for (int day=0;day<2;day++) {
+		for (Prediction p : myGraph.getPredictions().get(day)) {
+			System.out.println("Road : " + p.getRoadName() +" will have traffic " + p.getTraffic());
+		}
+		}
+		
+		
 		
 		for (int day=0;day<2;day++) {
 			System.out.println("----------------------");

@@ -77,8 +77,11 @@ public class GraphMaker {
 				break;
 
 			case "Day" :   //start roads reading
+				if (isPredictions == true) {
 				g.initDayPred(daysCount);
+				} else {
 				g.initDayTraffic(daysCount);
+				}
 				isDay=true;
 				break;
 			case "/Day" : 
