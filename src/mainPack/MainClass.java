@@ -10,6 +10,7 @@ import java.util.Set;
 import java.util.stream.Stream;
 
 import fileHandler.GraphMaker;
+import graph.ActualTraffic;
 import graph.Edge;
 import graph.Graph;
 import graph.Node;
@@ -53,6 +54,14 @@ public class MainClass {
 //		}
 //		
 //		
+		
+		for (int day=0;day<2;day++) {
+			System.out.println("----------------------");
+			for (ActualTraffic a : myGraph.getActualTraffic().get(day)) {
+				
+				System.out.println("Road : " + a.getRoadName() +" has traffic " + a.getTraffic());
+			}
+		}
 	}
 }
 

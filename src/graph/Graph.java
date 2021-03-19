@@ -2,11 +2,8 @@ package graph;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
 import graph.Edge;
 
 public class Graph {
@@ -19,7 +16,7 @@ public class Graph {
 	
 
 	private Map<Integer,List<Prediction>> predictions = new HashMap<Integer,List<Prediction>>(); ;//day at index, list of predictions in list
-	private Map<Integer,List<Prediction>> actualTraffic; // either map or class ActualTraffic !!!!!!!!!
+	private Map<Integer,List<ActualTraffic>> actualTraffic = new HashMap<Integer,List<ActualTraffic>>(); // either map or class ActualTraffic !!!!!!!!!
 
 	//Constructor
 	public Graph() {
@@ -89,6 +86,26 @@ public class Graph {
 	}
 	
 	
+	public void initDayTraffic(int day) {
+		this.actualTraffic.put(day, new ArrayList<ActualTraffic>());
+	}
+	
+	
+	
+	public void addTraffic(int day, String rn, int tr) {
+		
+
+		
+		for (int d : this.actualTraffic.keySet()) {
+			if(day == d) {
+				
+				this.actualTraffic.get(d).add(new ActualTraffic(rn, tr)) ;
+			}			
+		}
+		
+
+		
+	}
 	
 	
 	//Setters-Getters
@@ -125,13 +142,13 @@ public class Graph {
 
 
 
-	public Map<Integer, List<Prediction>> getActualTraffic() {
+	public Map<Integer, List<ActualTraffic>> getActualTraffic() {
 		return actualTraffic;
 	}
 
 
 
-	public void setActualTraffic(Map<Integer, List<Prediction>> actualTraffic) {
+	public void setActualTraffic(Map<Integer, List<ActualTraffic>> actualTraffic) {
 		this.actualTraffic = actualTraffic;
 	}
 

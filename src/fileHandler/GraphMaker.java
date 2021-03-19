@@ -68,13 +68,17 @@ public class GraphMaker {
 				break;
 			case "ActualTrafficPerDay" : 
 				isTraffic = true;
+				daysCount=0;
+				//System.out.println("INTO ACTUAL TRAFFIC");
 				break;
 			case "/ActualTrafficPerDay" :
+				
 				isTraffic = false;
 				break;
 
 			case "Day" :   //start roads reading
 				g.initDayPred(daysCount);
+				g.initDayTraffic(daysCount);
 				isDay=true;
 				break;
 			case "/Day" : 
@@ -83,7 +87,7 @@ public class GraphMaker {
 				daysCount++;
 				break;
 			default :
-				
+//				System.out.printf("%b \t %b\n" ,isTraffic, isPredictions);
 				if (isRoads) {
 					n1 = new Node(data[1],g);
 					n2 = new Node(data[2],g);
@@ -116,6 +120,17 @@ public class GraphMaker {
 				}
 				else if (isTraffic) {
 					
+					rn = data[0];
+					if (data[1].equals(" low")) {
+						t = -1;
+					}
+					else if (data[1].equals(" normal")) {
+						t = 0;
+					} else {
+						t= 1;
+					}
+					//System.out.println(daysCount);
+					g.addTraffic(daysCount, rn, t);
 				}
 				
 				break;
