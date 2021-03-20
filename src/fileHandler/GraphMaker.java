@@ -143,42 +143,7 @@ public class GraphMaker {
 		return g;
 	}
 			
-//			case "Predictions" :  //predictions reading per day
-//				
-//				isPredictions= true;
-//				int daysCount=1;
-//				String d;
-//				while (isPredictions) {
-//					
-//					while (!line.equals("/Day")) {
-//						System.out.println(line);
-//						d = "Day" + Integer.toString(daysCount);
-//						System.out.println(d);
-//					}
-//					
-//				
-//					if (data[1].equals("/Predictions")) {
-//						isPredictions = false;
-//					}
-//			}
-//				break;
-//			case "ActualTrafficPerDay" :  //actual traffic reading per day
-//				isTraffic= true;
-//		
-//				while (isTraffic) {
-//				
-//				
-//					if (data[1].equals("/ActualTrafficPerDay")) {
-//						isTraffic = false;
-//					}
-//			}
-//				break;
-//		}
-//	
-//	}
-//		return g;
-//	}
-	
+
 	
 	
 	

@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 import java.util.stream.Stream;
 
 import fileHandler.GraphMaker;
@@ -47,21 +48,34 @@ public class MainClass {
 //			}
 //		}	
 //
-		for (int day=0;day<2;day++) {
-		for (Prediction p : myGraph.getPredictions().get(day)) {
-			System.out.println("Road : " + p.getRoadName() +" will have traffic " + p.getTraffic());
-		}
-		}
+//		for (int day=0;day<2;day++) {
+//		for (Prediction p : myGraph.getPredictions().get(day)) {
+//			System.out.println("Road : " + p.getRoadName() +" will have traffic " + p.getTraffic());
+//		}
+//		}
+//		
+//		
+//		
+//		for (int day=0;day<2;day++) {
+//			System.out.println("----------------------");
+//			for (ActualTraffic a : myGraph.getActualTraffic().get(day)) {
+//				
+//				System.out.println("Road : " + a.getRoadName() +" has traffic " + a.getTraffic());
+//			}
+//		}
+		
+//		System.out.println(myGraph.getSrcNode().getName());
+//		System.out.println(myGraph.getDestNode().getName());
 		
 		
+		TreeMap<Node, List<Node>> tree_map 
+        = new TreeMap<Node, List<Node>>(myGraph.getAdjNodes()); 
 		
-		for (int day=0;day<2;day++) {
-			System.out.println("----------------------");
-			for (ActualTraffic a : myGraph.getActualTraffic().get(day)) {
-				
-				System.out.println("Road : " + a.getRoadName() +" has traffic " + a.getTraffic());
-			}
-		}
+		System.out.println("TreeMap: "
+                + tree_map); 
+		
 	}
+	
+	
 }
 

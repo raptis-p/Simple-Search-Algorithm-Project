@@ -14,9 +14,26 @@ public class Graph {
 
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+	
+	
+	
+	
+	
+	private Node srcNode =new Node();
+	private Node destNode =new Node();
 
 	private Map<Integer,List<Prediction>> predictions = new HashMap<Integer,List<Prediction>>(); ;//day at index, list of predictions in list
-	private Map<Integer,List<ActualTraffic>> actualTraffic = new HashMap<Integer,List<ActualTraffic>>(); // either map or class ActualTraffic !!!!!!!!!
+	private Map<Integer,List<ActualTraffic>> actualTraffic = new HashMap<Integer,List<ActualTraffic>>(); //either map or class ActualTraffic !!!!!!!!!
 
 	//Constructor
 	public Graph() {
@@ -42,6 +59,14 @@ public class Graph {
 		}
 		if(flag==false) {
 			this.adjNodes.put(n, new ArrayList<Node>());
+			if (n.isSrc())
+			{
+				this.srcNode = n;
+			}
+			if (n.isGoal())
+			{
+				this.destNode = n;
+			}
 		}else {
 		}
 		
@@ -150,6 +175,30 @@ public class Graph {
 
 	public void setActualTraffic(Map<Integer, List<ActualTraffic>> actualTraffic) {
 		this.actualTraffic = actualTraffic;
+	}
+
+
+
+	public Node getSrcNode() {
+		return srcNode;
+	}
+
+
+
+	public void setSrcNode(Node srcNode) {
+		this.srcNode = srcNode;
+	}
+
+
+
+	public Node getDestNode() {
+		return destNode;
+	}
+
+
+
+	public void setDestNode(Node destNode) {
+		this.destNode = destNode;
 	}
 
 

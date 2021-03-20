@@ -11,7 +11,17 @@ public class Node {
 	private boolean isGoal;
 	
 	
+	
+	
+	
+	
+	
 	//Constructors
+	public Node() {
+		
+	}
+	
+	
 	public Node(String name,Graph g) {
 		this.name = name;
 		this.isSrc = false;
