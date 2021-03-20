@@ -16,6 +16,7 @@ import graph.Edge;
 import graph.Graph;
 import graph.Node;
 import graph.Prediction;
+import searchAlgorithms.IDS;
 
 
 //Passing filename as argument while running program
@@ -67,15 +68,9 @@ public class MainClass {
 //		System.out.println(myGraph.getSrcNode().getName());
 //		System.out.println(myGraph.getDestNode().getName());
 		
-		
-		TreeMap<Node, List<Node>> tree_map 
-        = new TreeMap<Node, List<Node>>(myGraph.getAdjNodes()); 
-		
-		System.out.println("TreeMap: "
-                + tree_map); 
+		IDS ids = new IDS(myGraph);
 		
 	}
-	
 	
 }
 

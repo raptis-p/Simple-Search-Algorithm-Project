@@ -9,7 +9,7 @@ public class Node {
 	private String name;
 	private boolean isSrc;
 	private boolean isGoal;
-	
+	private boolean isVisited;
 	
 	
 	
@@ -68,6 +68,16 @@ public class Node {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+
+	public boolean isVisited() {
+		return isVisited;
+	}
+
+
+	public void setVisited(boolean isVisited) {
+		this.isVisited = isVisited;
 	}
 	
 	
