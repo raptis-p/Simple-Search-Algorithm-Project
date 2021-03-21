@@ -1,7 +1,6 @@
 package graph;
 
-import java.util.HashMap;
-import java.util.Map;
+
 
 public class Prediction {
 
@@ -51,7 +50,7 @@ public class Prediction {
 	}
 
 	public void setP1(double p1) {
-		this.p1 = p1;
+		Prediction.p1 = p1;
 	}
 
 	public double getP2() {
@@ -59,7 +58,7 @@ public class Prediction {
 	}
 
 	public void setP2(double p2) {
-		this.p2 = p2;
+		Prediction.p2 = p2;
 	}
 
 	public double getP3() {
@@ -67,7 +66,7 @@ public class Prediction {
 	}
 
 	public void setP3(double p3) {
-		this.p3 = p3;
+		Prediction.p3 = p3;
 	}
 
 	public int getTraffic() {

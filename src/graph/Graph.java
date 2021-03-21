@@ -11,22 +11,6 @@ public class Graph {
 	
 	private Map<Node, List <Node>> adjNodes;
 	private List<Edge> edgesList;
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-
-	
-	
-	
 	
 	
 	private Node srcNode =new Node();
@@ -131,6 +115,77 @@ public class Graph {
 
 		
 	}
+	
+	
+	
+	public void predictTrafficInDay(int day) {
+		for (Edge e : this.edgesList) {
+			Prediction p = findPredByNameAndDay(e.getRoadName(), day);
+			if (p.getTraffic() == -1) {
+				//low traffic
+				e.setPredictedWeight(e.getWeight()-0.1*e.getWeight());
+			} else if (p.getTraffic() == 0) {
+				//normal traffic
+				e.setPredictedWeight(e.getWeight());
+			} else {
+				//heavy traffic
+				e.setPredictedWeight(e.getWeight()+0.25*e.getWeight());
+			}
+		}
+	}
+	
+	
+	public ActualTraffic findTrafficByNameAndDay(String name,int day) {
+		for (ActualTraffic a : this.actualTraffic.get(day)) {
+			if (a.getRoadName().equals(name)) {
+				return a;
+			}
+		}
+		return null; //if it didnt find it
+	}
+	
+	public void setActualTrafficInDay(int day) {
+		for (Edge e : this.edgesList) {
+			ActualTraffic p = findTrafficByNameAndDay(e.getRoadName(), day);
+			if (p.getTraffic() == -1) {
+				//low traffic
+				e.setRealWeight(e.getWeight()-0.1*e.getWeight());
+			} else if (p.getTraffic() == 0) {
+				//normal traffic
+				e.setRealWeight(e.getWeight());
+			} else {
+				//heavy traffic
+				e.setRealWeight(e.getWeight()+0.25*e.getWeight());
+			}
+		}
+	}
+	
+
+	
+	public Prediction findPredByNameAndDay(String name,int day) {
+		for (Prediction p : this.predictions.get(day)) {
+			if (p.getRoadName().equals(name)) {
+				return p;
+			}
+		}
+		return null; //if it didnt find it
+	}
+		
+	
+	
+	public Edge findEdgeByNodes(Node n1, Node n2) {
+		for (Edge e : this.getEdgesList()) {
+			if (e.containsNode(n1) && e.containsNode(n2)) {
+				return e;
+			}
+			
+		}
+		return null;
+	}
+	
+	
+	
+	
 	
 	
 	//Setters-Getters
