@@ -2,7 +2,7 @@ package graph;
 
 import java.util.ArrayList;
 
-
+import fileHandler.GraphMaker;
 
 public class Node {
 
@@ -11,34 +11,60 @@ public class Node {
 	private boolean isGoal;
 	private boolean isVisited;
 	
-	
+	private ArrayList<Node> neighbors;
 	private ArrayList<Edge> pathFromSrc;
-	private double costFromSrc;
+	private double cost;
 	
 	
 	//Constructors
 	public Node() {
-		this.pathFromSrc = new ArrayList<Edge>();
-		this.costFromSrc = 0;
+		this.isVisited = false;
+		neighbors = new ArrayList<Node>();
+		pathFromSrc = new ArrayList<Edge>();
 	}
 	
 	
 	public Node(String name,Graph g) {
 		this.name = name;
 		this.isSrc = false;
-		this.costFromSrc = 0;
 		this.isGoal = false;
-		this.pathFromSrc = new ArrayList<Edge>();
+		neighbors = new ArrayList<Node>();
+		this.isVisited = false;
+		pathFromSrc = new ArrayList<Edge>();
 	}
 	
 	public Node(String name,boolean src, boolean goal,Graph g) {
 		this.name =" "+name;
-		this.costFromSrc = 0;
 		this.isSrc = src;
 		this.isGoal = goal;
-		this.pathFromSrc = new ArrayList<Edge>();
+		this.isVisited = false;
+		neighbors = new ArrayList<Node>();
+		pathFromSrc = new ArrayList<Edge>();
 	}
 	
+//	public void setNode(Node n) {
+//		this.name = n.name;
+//		this.isSrc = n.isSrc;
+//		this.isGoal = n.isGoal;
+//		neighbors = n.neighbors;
+//		this.isVisited = n.isVisited;
+//		pathFromSrc = n.pathFromSrc;
+//		this.cost = n.cost;
+//	}
+	
+	
+	public void addNeighbor(Node n) {
+		boolean flag =true;
+		for (int i=0; i<this.neighbors.size();i++) {
+			if (this.neighbors.get(i).getName().equals(n.getName())) {
+				flag = false;
+			}
+		}
+		if (flag) {
+			this.neighbors.add(n);
+			
+		}
+	}
 	
 	public boolean equals(Node n) {
 	
@@ -49,6 +75,11 @@ public class Node {
 	}
 
 
+	
+	public void resetNodePathAndCost() {
+		this.pathFromSrc.clear();
+		this.cost = 0;
+	}
 	
 	//Getters-Setters
 	public String getName() {
@@ -84,7 +115,18 @@ public class Node {
 	public void setVisited(boolean isVisited) {
 		this.isVisited = isVisited;
 	}
-	
+
+
+	public ArrayList<Node> getNeighbors() {
+		return neighbors;
+	}
+
+
+	public void setNeighbors(ArrayList<Node> neighbors) {
+		this.neighbors = neighbors;
+	}
+
+
 	public ArrayList<Edge> getPathFromSrc() {
 		return pathFromSrc;
 	}
@@ -95,15 +137,14 @@ public class Node {
 	}
 
 
-	public double getCostFromSrc() {
-		return costFromSrc;
+	public double getCost() {
+		return cost;
 	}
 
 
-	public void setCostFromSrc(double costFromSrc) {
-		this.costFromSrc = costFromSrc;
+	public void setCost(double cost) {
+		this.cost = cost;
 	}
-	
 	
 	
 	

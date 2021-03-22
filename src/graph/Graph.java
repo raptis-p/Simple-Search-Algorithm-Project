@@ -1,4 +1,4 @@
-package graph;
+ package graph;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,8 +9,12 @@ import graph.Edge;
 public class Graph {
 
 	
-	private Map<Node, List <Node>> adjNodes;
 	private List<Edge> edgesList;
+	private List<Node> nodesList;
+
+	
+	
+	
 	
 	
 	private Node srcNode =new Node();
@@ -18,15 +22,27 @@ public class Graph {
 
 	private Map<Integer,List<Prediction>> predictions = new HashMap<Integer,List<Prediction>>(); ;//day at index, list of predictions in list
 	private Map<Integer,List<ActualTraffic>> actualTraffic = new HashMap<Integer,List<ActualTraffic>>(); //either map or class ActualTraffic !!!!!!!!!
+	
+	
 
 	//Constructor
 	public Graph() {
-		adjNodes= new HashMap<Node, List <Node>>();
 		setEdgesList(new ArrayList<Edge>());
+		setNodesList(new ArrayList<Node>());
 	}
 	
-	
-	
+	public void addNode(Node n) {
+		boolean flag =true;
+		for (int i=0; i<this.nodesList.size();i++) {
+			if (this.nodesList.get(i).getName().equals(n.getName())) {
+				flag = false;
+			}
+		}
+		if (flag) {
+			this.nodesList.add(n);
+		}
+		
+	}
 	public void addEdge(Edge e) {
 		if (!edgesList.contains(e)) {
 			edgesList.add(e);
@@ -34,88 +50,31 @@ public class Graph {
 	}
 	
 	
-	public void addNode(Node n) {
-		boolean flag=false;
-		for (Node n1:this.adjNodes.keySet()) {
-			if(n1.getName().equals(n.getName())) {
-				flag=true;
+	public void initializeNeighbors() {
+		for (Edge e : this.edgesList) {
+			Node n1 = e.getDestNode();
+			Node n2 = e.getSrcNode();
+			boolean flag = false;
+			for (Node n : this.nodesList) {
+				if (n.getName().equals(n1.getName())) {
+					n.addNeighbor(n2);
+					n2.addNeighbor(n);
+					flag = true;
+					
+				}
+				if (n.getName().equals(n2.getName())) {
+					n.addNeighbor(n1);
+					n1.addNeighbor(n);
+					flag = true;
+					
+				} 
 			}
+		if (!flag) {
+			n1.addNeighbor(n2);
+			n2.addNeighbor(n1);
 		}
-		if(flag==false) {
-			this.adjNodes.put(n, new ArrayList<Node>());
-			if (n.isSrc())
-			{
-				this.srcNode = n;
-			}
-			if (n.isGoal())
-			{
-				this.destNode = n;
-			}
-		}else {
 		}
-		
-		
 	}
-	
-	
-	public void addAdjNode(Node n1, Node n2) {		
-		boolean flag=false;
-		
-		for (Node list:this.adjNodes.keySet()) {
-			if(n1.getName().equals(list.getName())) {
-				flag=true;
-				this.adjNodes.get(list).add(n2) ;
-			}			
-		}
-				
-	}
-		
-		
-//		if(flag==false) {
-//			this.adjNodes.get(list).add(n2) ;
-//		}
-
-	public void initDayPred(int day) {
-		this.predictions.put(day, new ArrayList<Prediction>());
-	}
-	
-	public void addPrediction(int day, String rn, int tr) {
-		
-
-		
-		for (int d : this.predictions.keySet()) {
-			if(day == d) {
-				
-				this.predictions.get(d).add(new Prediction(rn, tr)) ;
-			}			
-		}
-		
-
-		
-	}
-	
-	
-	public void initDayTraffic(int day) {
-		this.actualTraffic.put(day, new ArrayList<ActualTraffic>());
-	}
-	
-	
-	
-	public void addTraffic(int day, String rn, int tr) {
-		
-
-		
-		for (int d : this.actualTraffic.keySet()) {
-			if(day == d) {
-				
-				this.actualTraffic.get(d).add(new ActualTraffic(rn, tr)) ;
-			}			
-		}
-		
-
-		
-	}
-	
 	
 	
 	public void predictTrafficInDay(int day) {
@@ -171,34 +130,54 @@ public class Graph {
 		return null; //if it didnt find it
 	}
 		
+//		if(flag==false) {
+//			this.adjNodes.get(list).add(n2) ;
+//		}
+
+	public void initDayPred(int day) {
+		this.predictions.put(day, new ArrayList<Prediction>());
+	}
 	
-	
-	public Edge findEdgeByNodes(Node n1, Node n2) {
-		for (Edge e : this.getEdgesList()) {
-			if (e.containsNode(n1) && e.containsNode(n2)) {
-				return e;
-			}
-			
+	public void addPrediction(int day, String rn, int tr) {
+		
+
+		
+		for (int d : this.predictions.keySet()) {
+			if(day == d) {
+				
+				this.predictions.get(d).add(new Prediction(rn, tr)) ;
+			}			
 		}
-		return null;
+		
+
+		
+	}
+	
+	
+	public void initDayTraffic(int day) {
+		this.actualTraffic.put(day, new ArrayList<ActualTraffic>());
 	}
 	
 	
 	
-	
+	public void addTraffic(int day, String rn, int tr) {
+		
+
+		
+		for (int d : this.actualTraffic.keySet()) {
+			if(day == d) {
+				
+				this.actualTraffic.get(d).add(new ActualTraffic(rn, tr)) ;
+			}			
+		}
+		
+
+		
+	}
 	
 	
 	//Setters-Getters
-	public Map<Node, List<Node>> getAdjNodes() {
-		return adjNodes;
-	}
-
-
-	public void setAdjNodes(Map<Node, List<Node>> adjNodes) {
-		this.adjNodes = adjNodes;
-	}
-
-
+	
 
 	public List<Edge> getEdgesList() {
 		return edgesList;
@@ -254,6 +233,18 @@ public class Graph {
 
 	public void setDestNode(Node destNode) {
 		this.destNode = destNode;
+	}
+
+
+
+	public List<Node> getNodesList() {
+		return nodesList;
+	}
+
+
+
+	public void setNodesList(List<Node> nodesList) {
+		this.nodesList = nodesList;
 	}
 
 

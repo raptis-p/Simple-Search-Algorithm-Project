@@ -22,14 +22,13 @@ public class Edge {
 	}
 
 
-	public String toString2() {
+	public String toString() {
 		return "Starting Node: "+this.srcNode.getName()+" with destination Node: "+this.destNode.getName()+" are connected with road: "+this.roadName+" and its weight is: "+this.weight;
 	}
 	
 	public String toStringPred() {
 		return "Starting Node: "+this.srcNode.getName()+" with destination Node: "+this.destNode.getName()+" are connected with road: "+this.roadName+" and its weight is: "+this.weight + " and predicted weight is: "+ this.predictedWeight;
 	}
-	
 	
 	//ContainsNode method
 	public boolean containsNode(Node n) {
@@ -40,6 +39,7 @@ public class Edge {
 		}
 	}
 	
+
 	
 	
 	//Getters-Setters
@@ -81,7 +81,8 @@ public class Edge {
 	public void setWeight(double weight) {
 		this.weight = weight;
 	}
-	
+
+
 	public double getPredictedWeight() {
 		return predictedWeight;
 	}
@@ -100,6 +101,7 @@ public class Edge {
 	public void setRealWeight(double realWeight) {
 		this.realWeight = realWeight;
 	}
+	
 	
 	
 	

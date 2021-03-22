@@ -37,22 +37,26 @@ public class GraphMaker {
 		
 		String line;
 		
-		Node n1,n2;
+		
 		int daysCount = 0, t;
 		String rn;
 		
 		
 		while ((line=rdr.readLine() )!=null)  {	
-			
+			Node n1 = new Node(),n2 =new Node();
 			String[] data= line.split("[><;]");
 			//System.out.println(data[1]);
 			switch(data[1]) {
 			
 			case "Source" :
-				g.addNode(new Node(data[2], true, false,g));
+				Node src = new Node(data[2],true,false,g);
+				g.setSrcNode(src);
+				g.addNode(src);
 				break;
 			case "Destination" :
-				g.addNode(new Node(data[2], false, true,g));
+				
+				g.setDestNode(new Node(data[2], false, true,g));
+				g.addNode(g.getDestNode());
 				break;
 			case "Roads" :   //start roads reading
 				isRoads=true;
@@ -92,19 +96,17 @@ public class GraphMaker {
 			default :
 //				System.out.printf("%b \t %b\n" ,isTraffic, isPredictions);
 				if (isRoads) {
+					
+					//kathe fora ginontai new node, prepei an iparxei idi to node apla na vazoyme sto addneigbors aytou oxi na kanoyme new node kai na ta vazoyme ekei
+					
 					n1 = new Node(data[1],g);
 					n2 = new Node(data[2],g);
-					
-					Edge e = new Edge(data[0],n1,n2,Double.parseDouble(data[3])); 
-
 					g.addNode(n1);
 					g.addNode(n2);
-					
+//					n1.addNeighbor(n2);
+//					n2.addNeighbor(n1);
 
-					
-					g.addAdjNode(n1, n2);
-					g.addAdjNode(n2, n1);
-					
+					Edge e = new Edge(data[0],n1,n2,Double.parseDouble(data[3]));
 					g.addEdge(e);
 					
 				}
