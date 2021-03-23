@@ -79,6 +79,7 @@ public class Node {
 	public void resetNodePathAndCost() {
 		this.pathFromSrc.clear();
 		this.cost = 0;
+		this.isVisited=false;
 	}
 	
 	//Getters-Setters

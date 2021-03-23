@@ -130,9 +130,59 @@ public class Graph {
 		return null; //if it didnt find it
 	}
 		
-//		if(flag==false) {
-//			this.adjNodes.get(list).add(n2) ;
-//		}
+
+	
+	public double findWeight(Node n1, Node n2)  ////////////////// FINDDDD MIIIIINNNNN
+	{
+		double min=999999999;
+		for(Edge e:this.edgesList)
+		{
+			if((n1.getName().equals(e.getSrcNode().getName())  &&  n2.getName().equals(e.getDestNode().getName() ))    ||    (n1.getName().equals(e.getDestNode().getName())  &&  n2.getName().equals(e.getSrcNode().getName() ))       )
+			{
+				if(e.getPredictedWeight()<min)
+				{
+					min=e.getPredictedWeight();
+					System.out.println("Min way from Node:"+n1.getName()+" to Node:"+n2.getName()+" has probably the weight of:"+min);
+				}
+			}
+		}
+		System.out.println("Min way from Node:"+n1.getName()+" to Node:"+n2.getName()+" has the weight of:"+min);
+		System.out.println("----------------\n\n");
+		return min;
+		
+	}
+	
+	
+	
+	public void resetCosts_Path()
+	{
+		for (Node n:this.nodesList)
+		{
+			n.resetNodePathAndCost();
+			for(Node n1:n.getNeighbors())
+			{
+				n1.setCost(0);
+				n1.setVisited(false);
+			}
+		}
+	}
+	
+	public void resetCosts()
+	{
+		for (Node n:this.nodesList)
+		{
+			
+			n.setCost(0);
+			n.setVisited(false);
+			for(Node n1:n.getNeighbors())
+			{
+				n1.setCost(0);
+				n1.setVisited(false);
+			}
+		}
+	}
+	
+	
 
 	public void initDayPred(int day) {
 		this.predictions.put(day, new ArrayList<Prediction>());

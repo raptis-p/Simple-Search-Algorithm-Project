@@ -43,26 +43,41 @@ public class IDS {
 //		}
 //		
 //		
+		g.getEdgesList();
+		double plafon=0;
+		int count =0;
+		
 		Node nT= new Node();
 		while (!stack.isEmpty()) {
 			
 			current = stack.pop();
-			System.out.println("Current is : " + current.getName());
+			//System.out.println(current.isVisited());
+			//System.out.println("Current is : " + current.getName());
+			//System.out.println(current.getCost());
 			if (current.getName().equals(goal.getName())) {
+				plafon=current.getCost();
 				System.out.println("GOAL");
-			}
+				System.out.println(current.getCost());
+				count++;
+				continue;
 			
+			}
 			if (!current.isVisited()) {
 				current.setVisited(true);
-				System.out.println("-----------------");
+				//System.out.println("-----------------");
 				for (Node n : g.getNodesList()) {
 					if (n.getName().equals(current.getName())) {
 						for (Node n1 : n.getNeighbors()) {
+							//System.out.println(g.findWeight(current, n1));
 							if (n1.isVisited()) {
+
 								continue;
+								
 							}
-								System.out.println(n1.getName());
-								stack.push(n1);
+							double tmpCost=g.findWeight(current, n1);
+							n1.setCost(current.getCost()+tmpCost);
+							//System.out.println(n1.getName());
+							stack.push(n1);
 						}
 					}
 				}
@@ -71,7 +86,6 @@ public class IDS {
 			
 			}
 		
-				
 				
 		}
 		

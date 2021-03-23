@@ -45,7 +45,7 @@ public class MainClass {
 //		}
 //		
 		
-		IDS ids = new IDS(myGraph);
+		//IDS ids = new IDS(myGraph);
 //		Node s = myGraph.getSrcNode();
 //		System.out.println(myGraph.getSrcNode().getName());
 //		System.out.println(s.getNeighbors().size());
@@ -53,25 +53,29 @@ public class MainClass {
 		//maybe remove some streets with same src-dest and 
 		//big difference in weight values
 		
-		for (int day=0;day<80;day++) {
+		for (int day=0;day<2;day++) {
 			
-			
+			System.out.println("--------- fdjfdffd    fdsfdsfd   alaksaaaaaaaaa----------------");
+			System.out.println("Day : "+day);
 			//predict traffic
 			myGraph.predictTrafficInDay(day);
 			
 //			for (Edge e :myGraph.getEdgesList()) {
-//				System.out.println(e.toStringPred());
+//				//System.out.println(e.toStringPred());
 //			}
 			//maybe remove some streets
 			//based on predictions
 			
 			
 			
+			IDS ids = new IDS(myGraph);
+			myGraph.resetCosts_Path();
+			
 			//execute IDS
 			
 			
 			//set actual traffic values
-			myGraph.setActualTrafficInDay(day);
+			//myGraph.setActualTrafficInDay(day);
 			
 			//execute path with actual traffic
 			
