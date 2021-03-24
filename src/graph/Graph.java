@@ -142,12 +142,9 @@ public class Graph {
 				if(e.getPredictedWeight()<min)
 				{
 					min=e.getPredictedWeight();
-					System.out.println("Min way from Node:"+n1.getName()+" to Node:"+n2.getName()+" has probably the weight of:"+min);
 				}
 			}
 		}
-		System.out.println("Min way from Node:"+n1.getName()+" to Node:"+n2.getName()+" has the weight of:"+min);
-		System.out.println("----------------\n\n");
 		return min;
 		
 	}

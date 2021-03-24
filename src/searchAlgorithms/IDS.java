@@ -21,7 +21,6 @@ public class IDS {
 	public IDS(Graph g) {
 		
 		
-		int minCost = Integer.MAX_VALUE;
 		
 		int depth = 0;
 		stack = new Stack<>();
@@ -44,48 +43,102 @@ public class IDS {
 //		
 //		
 		g.getEdgesList();
-		double plafon=0;
+		double minCost1=Double.MAX_VALUE;
 		int count =0;
 		
 		Node nT= new Node();
 		while (!stack.isEmpty()) {
 			
 			current = stack.pop();
-			//System.out.println(current.isVisited());
-			//System.out.println("Current is : " + current.getName());
+			current.addPath(current);
+			
+		
+			
+			
+			//System.out.println(current.getPathFromSrc());
 			//System.out.println(current.getCost());
+			//System.out.println("Current is : " + current.getName());	
 			if (current.getName().equals(goal.getName())) {
-				plafon=current.getCost();
+				if(current.getCost()>=minCost1)
+				{
+					continue;
+				}
+				else {
+				minCost1=current.getCost();
 				System.out.println("GOAL");
 				System.out.println(current.getCost());
+				for(Node node:current.getPathFromSrc())
+				{
+					//System.out.println(node.getName());
+				}
 				count++;
 				continue;
+				}
 			
 			}
 			if (!current.isVisited()) {
 				current.setVisited(true);
+				
 				//System.out.println("-----------------");
 				for (Node n : g.getNodesList()) {
 					if (n.getName().equals(current.getName())) {
 						for (Node n1 : n.getNeighbors()) {
-							//System.out.println(g.findWeight(current, n1));
+							//System.out.println(n1.getName());
+							for(Node help:g.getNodesList())
+							{
+								if(help.getName().equals(n1.getName()))
+								{
+									n1=help;
+								}
+							}
+							
+							
 							if (n1.isVisited()) {
-
-								continue;
-								
+								continue;	
 							}
 							double tmpCost=g.findWeight(current, n1);
 							n1.setCost(current.getCost()+tmpCost);
-							//System.out.println(n1.getName());
-							stack.push(n1);
+							if(n1.getCost()>minCost1) {
+								continue;
+							}
+							
+							
+							for(Node hel:current.getPathFromSrc()) {
+								n1.addPath(hel);
+							}
+							
+							stack.push(n1);	
+						}
+						//System.out.println("min weight for Node:"+current.getName()+" to Node:"+stack.peek().getName()+" is:"+stack.peek().getCost());
+					}
+				}
+			}
+			else // VISITED
+			{
+				for (Node n : g.getNodesList()) {
+					if (n.getName().equals(current.getName())) {
+						for (Node n1 : n.getNeighbors()) {
+							for(Node help:g.getNodesList())
+							{
+								if(help.getName().equals(n1.getName()))
+								{
+									n1=help;
+								}
+							}
+							double tmpCost=g.findWeight(current, n1);
+							//
+							if(current.getCost()+tmpCost< n1.getCost())
+							{
+								n1.setCost(current.getCost()+tmpCost);
+								//System.out.println("now cost is: "+n1.getCost());
+								stack.push(n1);
+							}
 						}
 					}
 				}
-			
-			
-			
+				
 			}
-		
+			
 				
 		}
 		

@@ -12,7 +12,7 @@ public class Node {
 	private boolean isVisited;
 	
 	private ArrayList<Node> neighbors;
-	private ArrayList<Edge> pathFromSrc;
+	private ArrayList<Node> pathFromSrc;
 	private double cost;
 	
 	
@@ -20,7 +20,7 @@ public class Node {
 	public Node() {
 		this.isVisited = false;
 		neighbors = new ArrayList<Node>();
-		pathFromSrc = new ArrayList<Edge>();
+		pathFromSrc = new ArrayList<Node>();
 	}
 	
 	
@@ -30,7 +30,7 @@ public class Node {
 		this.isGoal = false;
 		neighbors = new ArrayList<Node>();
 		this.isVisited = false;
-		pathFromSrc = new ArrayList<Edge>();
+		pathFromSrc = new ArrayList<Node>();
 	}
 	
 	public Node(String name,boolean src, boolean goal,Graph g) {
@@ -39,7 +39,7 @@ public class Node {
 		this.isGoal = goal;
 		this.isVisited = false;
 		neighbors = new ArrayList<Node>();
-		pathFromSrc = new ArrayList<Edge>();
+		pathFromSrc = new ArrayList<Node>();
 	}
 	
 //	public void setNode(Node n) {
@@ -51,6 +51,14 @@ public class Node {
 //		pathFromSrc = n.pathFromSrc;
 //		this.cost = n.cost;
 //	}
+	
+	
+	public void addPath(Node cur)
+	{
+		if(!this.pathFromSrc.contains(cur))
+			this.pathFromSrc.add(cur);
+	}
+	
 	
 	
 	public void addNeighbor(Node n) {
@@ -128,12 +136,12 @@ public class Node {
 	}
 
 
-	public ArrayList<Edge> getPathFromSrc() {
+	public ArrayList<Node> getPathFromSrc() {
 		return pathFromSrc;
 	}
 
 
-	public void setPathFromSrc(ArrayList<Edge> pathFromSrc) {
+	public void setPathFromSrc(ArrayList<Node> pathFromSrc) {
 		this.pathFromSrc = pathFromSrc;
 	}
 
