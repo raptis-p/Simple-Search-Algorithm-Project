@@ -54,7 +54,7 @@ public class MainClass {
 		//maybe remove some streets with same src-dest and 
 		//big difference in weight values
 		
-		for (int day=0;day<80;day++) {
+		for (int day=0;day<2;day++) {
 			myGraph.resetCosts_Path();
 //			System.out.println("--------- fdjfdffd    fdsfdsfd   alaksaaaaaaaaa----------------");
 //			System.out.println("Day : "+day);
@@ -75,6 +75,8 @@ public class MainClass {
 //				);
 //				
 //			}
+			System.out.println("Minimum Cost to Goal is : " + ids.getMinReturn());
+			System.out.println("Nodes visited : " + ids.getNodesVisited() + " out of " +myGraph.getNodesList().size());
 			System.out.println("--------------------------------------------------");
 			//myGraph.resetCosts_Path();
 //
@@ -87,42 +89,53 @@ public class MainClass {
 			
 			//set actual traffic values
 			myGraph.setActualTrafficInDay(day);
-			System.out.println("------------------DFS(Morning)-------------------");
-			//execute path with actual traffic
-			int sum=0;
-			int i = 0;
-			Node n5 = myGraph.getDestNode().getPathFromSrc().get(i);
-			for (Node n1 : myGraph.getDestNode().getPathFromSrc()) {
-				i++;
-				if (n1.getName().equals(myGraph.getDestNode().getPathFromSrc().get(0).getName())) continue;
-				System.out.println(n1.getName());
-				//For node n -> next node -> findWeight but with real instead of predicted values
-				sum += myGraph.findRealWeight(n5,n1);
-				if (i>= myGraph.getDestNode().getPathFromSrc().size()) break;
-				n5 = myGraph.getDestNode().getPathFromSrc().get(i);
-				
-				if (n1.getName().equals(myGraph.getDestNode().getName())) break;
-			}
-			System.out.println("Predicted Cost of Path: " +myGraph.getDestNode().getCost() );
-			System.out.println("Real Cost of Path: " + sum);
+		
 			//print Visited Nodes Number, (exec time)
 			//sequence of edges(with their weights), total predicted cost
 			//and total real cost
-			System.out.println("--------------------------------------------------");
 			//execute IDA*
 			//reset visited but not costs
 			System.out.println("-------------------A*(Night)----------------------");
 			IDAstar ida = new IDAstar(myGraph);
-			
-			for (Node n : myGraph.getDestNode().getPathFromSrc())
-			System.out.println(n.getName() + "     " +n.getCost());
+			System.out.println("Minimum Cost to Goal is : " + ida.getMinCost());
+			System.out.println("Nodes visited(total): " + ida.getNodesVisited1());
+			System.out.println("Nodes visited(last iteration): " + ida.getNodesVisited2());
+//			for (Node n : myGraph.getDestNode().getPathFromSrc())
+//			System.out.println(n.getName() + "     " +n.getCost());
 			//use path with actual traffic
 			System.out.println("---------------------------------------------------");
 			
 			//print Visited Nodes Number, (exec time)
 			//sequence of edges(with their weights), total predicted cost
 			//and total real cost
+			System.out.println("------------------DFS(Morning)-------------------");
+			//execute path with actual traffic
+			int sum1=0,sum2=0;
+			int i = 0;
+			Node n5 = myGraph.getDestNode().getPathFromSrc().get(i);
+			for (Node n1 : myGraph.getDestNode().getPathFromSrc()) {
+				i++;
+				if (n1.getName().equals(myGraph.getDestNode().getPathFromSrc().get(0).getName())) continue;
+				//System.out.println(n1.getName());
+				//For node n -> next node -> findWeight but with real instead of predicted values
+				sum2+=myGraph.findWeight(n5,n1);
+				sum1 += myGraph.findRealWeight(n5,n1);
+				if (i>= myGraph.getDestNode().getPathFromSrc().size()) break;
+				n5 = myGraph.getDestNode().getPathFromSrc().get(i);
+				
+				if (n1.getName().equals(myGraph.getDestNode().getName())) break;
+			}
+			System.out.println("Predicted Cost of Path: " +sum2) ;
+			System.out.println("Real Cost of Path: " + sum1);
+			System.out.println("---------------------------------------------------");
 			
+			
+			System.out.println("------------------A*(Morning)-------------------");
+			
+			System.out.println("Predicted Cost of Path: " +sum2) ;
+			System.out.println("Real Cost of Path: " + sum1);
+			
+			System.out.println("---------------------------------------------------");
 			//update p1,p2,p3
 			
 			//go to next day

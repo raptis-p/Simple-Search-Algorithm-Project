@@ -15,11 +15,13 @@ public class IDS {
 	
 	private int limit;
 	private Stack<Node> stack;
+	private double minReturn;
+	private int nodesVisited;
 //	private ArrayList<Edge> optimalPath;
 	
 	
 	public IDS(Graph g) {
-		
+		nodesVisited =0;
 		
 		
 		int depth = 0;
@@ -70,9 +72,9 @@ public class IDS {
 					continue;
 				}
 				else {
-				minCost1=current.getCost();
-				System.out.println("GOAL");
-				System.out.println(current.getCost());
+				minReturn=current.getCost();
+//				System.out.println("GOAL");
+//				System.out.println(current.getCost());
 				for(Node node:current.getPathFromSrc())
 //				{
 //					//System.out.println(node.getName());
@@ -85,7 +87,7 @@ public class IDS {
 			}
 			if (!current.isVisited()) {
 				current.setVisited(true);
-				
+				nodesVisited++;
 				//System.out.println("-----------------");
 				for (Node n : g.getNodesList()) {
 					if (n.getName().equals(current.getName())) {
@@ -142,6 +144,8 @@ public class IDS {
 							{
 								n1.setCost(current.getCost()+tmpCost);
 								//System.out.println("now cost is: "+n1.getCost());
+//								if (!n1.isVisited())
+//								nodesVisited++;
 								stack.push(n1);
 							}
 						}
@@ -154,6 +158,26 @@ public class IDS {
 		}
 		
 		
+	}
+
+
+	public double getMinReturn() {
+		return minReturn;
+	}
+
+
+	public void setMinReturn(double minReturn) {
+		this.minReturn = minReturn;
+	}
+
+
+	public int getNodesVisited() {
+		return nodesVisited;
+	}
+
+
+	public void setNodesVisited(int nodesVisited) {
+		this.nodesVisited = nodesVisited;
 	}
 }
 
