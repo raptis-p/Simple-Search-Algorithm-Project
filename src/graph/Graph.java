@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Stack;
+
 import graph.Edge;
 
 public class Graph {
@@ -22,8 +24,6 @@ public class Graph {
 
 	private Map<Integer,List<Prediction>> predictions = new HashMap<Integer,List<Prediction>>(); ;//day at index, list of predictions in list
 	private Map<Integer,List<ActualTraffic>> actualTraffic = new HashMap<Integer,List<ActualTraffic>>(); //either map or class ActualTraffic !!!!!!!!!
-	
-	
 
 	//Constructor
 	public Graph() {
@@ -137,7 +137,7 @@ public class Graph {
 		double min=999999999;
 		for(Edge e:this.edgesList)
 		{
-			if((n1.getName().equals(e.getSrcNode().getName())  &&  n2.getName().equals(e.getDestNode().getName() ))    ||    (n1.getName().equals(e.getDestNode().getName())  &&  n2.getName().equals(e.getSrcNode().getName() ))       )
+			if(e.containsNode(n1) && e.containsNode(n2))
 			{
 				if(e.getPredictedWeight()<min)
 				{
@@ -149,6 +149,70 @@ public class Graph {
 		
 	}
 	
+	
+	
+	public double findRealWeight(Node n1, Node n2) {
+
+		double min=999999999;
+		for(Edge e:this.edgesList)
+		{
+			if(e.containsNode(n1) && e.containsNode(n2))
+			{
+				if(e.getRealWeight()<min)
+				{
+					min=e.getRealWeight();
+				}
+			}
+		}
+		return min;
+		
+	}
+	
+	public void calculateHeuristic() {
+		
+		Stack<Node> stack = new Stack<Node>();
+		Node current;
+		
+		stack.push(this.destNode);
+		
+		while (!stack.isEmpty()) {
+			
+			current = stack.pop();
+			
+			if (!current.isVisited()) {
+				current.setVisited(true);
+				
+				//System.out.println("-----------------");
+				for (Node n : this.getNodesList()) {
+					if (n.getName().equals(current.getName())) {
+						for (Node n1 : n.getNeighbors()) {
+							//System.out.println(n1.getName());
+							for(Node help:this.getNodesList())
+							{
+								if(help.getName().equals(n1.getName()))
+								{
+									n1=help;
+								}
+							}
+							if (!n1.isVisited()) {
+								n1.setHeuristic(n1.getHeuristic() + 20);
+							}
+							stack.push(n1);	
+						}
+					}
+				}
+			}
+		}
+		//this.resetCosts_Path();
+	}
+	
+	
+	public void resetVisitsAndPath() {
+		for (Node n : this.nodesList) {
+			n.setVisited(false);
+			n.getPathFromSrc().clear();
+		}
+	}
 	
 	
 	public void resetCosts_Path()

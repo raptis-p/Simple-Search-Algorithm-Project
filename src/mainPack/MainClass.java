@@ -16,6 +16,7 @@ import graph.Edge;
 import graph.Graph;
 import graph.Node;
 import graph.Prediction;
+import searchAlgorithms.IDAstar;
 import searchAlgorithms.IDS;
 
 
@@ -53,41 +54,70 @@ public class MainClass {
 		//maybe remove some streets with same src-dest and 
 		//big difference in weight values
 		
-		for (int day=0;day<2;day++) {
-			
-			System.out.println("--------- fdjfdffd    fdsfdsfd   alaksaaaaaaaaa----------------");
-			System.out.println("Day : "+day);
+		for (int day=0;day<80;day++) {
+			myGraph.resetCosts_Path();
+//			System.out.println("--------- fdjfdffd    fdsfdsfd   alaksaaaaaaaaa----------------");
+//			System.out.println("Day : "+day);
 			//predict traffic
 			myGraph.predictTrafficInDay(day);
 			
 //			for (Edge e :myGraph.getEdgesList()) {
-//				//System.out.println(e.toStringPred());
+//				System.out.println(e.toStringPred());
 //			}
 			//maybe remove some streets
 			//based on predictions
 			
 			
-			
+			System.out.println("-------------------DFS(Night)---------------------");
 			IDS ids = new IDS(myGraph);
-			myGraph.resetCosts_Path();
+//			for (Node n: myGraph.getDestNode().getPathFromSrc()) {
+//				System.out.println(n.getName() + "      " + n.getCost()
+//				);
+//				
+//			}
+			System.out.println("--------------------------------------------------");
+			//myGraph.resetCosts_Path();
+//
 			
-			//execute IDS
+//			for (Node n : myGraph.getNodesList()) {
+//				System.out.println(n.getName() + "       " + n.getHeuristic());
+//			}
+//			//execute IDS
 			
 			
 			//set actual traffic values
-			//myGraph.setActualTrafficInDay(day);
-			
+			myGraph.setActualTrafficInDay(day);
+			System.out.println("------------------DFS(Morning)-------------------");
 			//execute path with actual traffic
-			
-			
+			int sum=0;
+			int i = 0;
+			Node n5 = myGraph.getDestNode().getPathFromSrc().get(i);
+			for (Node n1 : myGraph.getDestNode().getPathFromSrc()) {
+				i++;
+				if (n1.getName().equals(myGraph.getDestNode().getPathFromSrc().get(0).getName())) continue;
+				System.out.println(n1.getName());
+				//For node n -> next node -> findWeight but with real instead of predicted values
+				sum += myGraph.findRealWeight(n5,n1);
+				if (i>= myGraph.getDestNode().getPathFromSrc().size()) break;
+				n5 = myGraph.getDestNode().getPathFromSrc().get(i);
+				
+				if (n1.getName().equals(myGraph.getDestNode().getName())) break;
+			}
+			System.out.println("Predicted Cost of Path: " +myGraph.getDestNode().getCost() );
+			System.out.println("Real Cost of Path: " + sum);
 			//print Visited Nodes Number, (exec time)
 			//sequence of edges(with their weights), total predicted cost
 			//and total real cost
-			
+			System.out.println("--------------------------------------------------");
 			//execute IDA*
+			//reset visited but not costs
+			System.out.println("-------------------A*(Night)----------------------");
+			IDAstar ida = new IDAstar(myGraph);
 			
+			for (Node n : myGraph.getDestNode().getPathFromSrc())
+			System.out.println(n.getName() + "     " +n.getCost());
 			//use path with actual traffic
-			
+			System.out.println("---------------------------------------------------");
 			
 			//print Visited Nodes Number, (exec time)
 			//sequence of edges(with their weights), total predicted cost

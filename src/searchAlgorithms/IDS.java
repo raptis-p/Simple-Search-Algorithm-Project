@@ -30,6 +30,11 @@ public class IDS {
 //		ArrayList<Edge> path = new ArrayList<>();
 		
 		
+	
+		
+		
+		
+		
 		stack.push(srcNode);
 //		Node nT = new Node();
 //		for (Node n : g.getNodesList()) {
@@ -54,6 +59,7 @@ public class IDS {
 			
 		
 			
+		
 			
 			//System.out.println(current.getPathFromSrc());
 			//System.out.println(current.getCost());
@@ -68,12 +74,13 @@ public class IDS {
 				System.out.println("GOAL");
 				System.out.println(current.getCost());
 				for(Node node:current.getPathFromSrc())
-				{
-					//System.out.println(node.getName());
-				}
+//				{
+//					//System.out.println(node.getName());
+//				}
 				count++;
 				continue;
 				}
+				
 			
 			}
 			if (!current.isVisited()) {
@@ -97,7 +104,11 @@ public class IDS {
 								continue;	
 							}
 							double tmpCost=g.findWeight(current, n1);
+							if (current.getName().equals(srcNode.getName())) {
+								n1.setCost(tmpCost);
+							} else {
 							n1.setCost(current.getCost()+tmpCost);
+							}
 							if(n1.getCost()>minCost1) {
 								continue;
 							}

@@ -16,11 +16,14 @@ public class Node {
 	private double cost;
 	
 	
+	private double heuristic;
+	
 	//Constructors
 	public Node() {
 		this.isVisited = false;
 		neighbors = new ArrayList<Node>();
 		pathFromSrc = new ArrayList<Node>();
+		this.heuristic = 0;
 	}
 	
 	
@@ -31,6 +34,7 @@ public class Node {
 		neighbors = new ArrayList<Node>();
 		this.isVisited = false;
 		pathFromSrc = new ArrayList<Node>();
+		this.heuristic = 0;
 	}
 	
 	public Node(String name,boolean src, boolean goal,Graph g) {
@@ -40,6 +44,7 @@ public class Node {
 		this.isVisited = false;
 		neighbors = new ArrayList<Node>();
 		pathFromSrc = new ArrayList<Node>();
+		this.heuristic = 0;
 	}
 	
 //	public void setNode(Node n) {
@@ -154,7 +159,19 @@ public class Node {
 	public void setCost(double cost) {
 		this.cost = cost;
 	}
+
+
+	public double getHeuristic() {
+		return heuristic;
+	}
+
+
+	public void setHeuristic(double heuristic) {
+		this.heuristic = heuristic;
+	}
 	
+	
+
 	
 	
 }
