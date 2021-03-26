@@ -54,14 +54,16 @@ public class MainClass {
 		//maybe remove some streets with same src-dest and 
 		//big difference in weight values
 		
-		
+		int c=0,c1=0,cfinal=0;
 		
 		for (int day=0;day<80;day++) {
 			myGraph.resetCosts_Path();
 //			System.out.println("--------- fdjfdffd    fdsfdsfd   alaksaaaaaaaaa----------------");
 //			System.out.println("Day : "+day);
 			//predict traffic
+			myGraph.changePred(day);
 			myGraph.predictTrafficInDay(day);
+			
 			
 //			for (Edge e :myGraph.getEdgesList()) {
 //				System.out.println(e.toStringPred());
@@ -91,20 +93,31 @@ public class MainClass {
 			
 			//set actual traffic values
 			myGraph.setActual_updatePreds(day);
+		
 			
-			int c=0;
+			
+			
+			
 			System.out.println("----------------");
 			System.out.println("Success rate");
 			for(Edge e:myGraph.getEdgesList())
 			{	
 				if(e.getPredictedWeight()==e.getRealWeight())
 				{
-					
+					if(day==0)
+					{
+						c1++;
+					}
+					else if(day==79)
+					{
+						cfinal++;
+					}
 					c++;
 				}
 			}
 			double ratio=c;
 			System.out.println(ratio/myGraph.getEdgesList().size());
+			c=0;
 			
 			//print Visited Nodes Number, (exec time)
 			//sequence of edges(with their weights), total predicted cost
@@ -155,10 +168,16 @@ public class MainClass {
 			//update p1,p2,p3
 			
 			
-			myGraph.changePred(day);
+			
 			//go to next day
 		}
+		double ratio2=c1;
+		//System.out.println(ratio2/myGraph.getEdgesList().size());
 		
+		
+		double ratio3=cfinal;
+		double res=ratio3/myGraph.getEdgesList().size()-ratio2/myGraph.getEdgesList().size();
+		System.out.println("Namaste:"+res);
 	}
 	
 }

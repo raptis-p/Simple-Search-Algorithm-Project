@@ -23,7 +23,11 @@ public class Graph {
 	private Node srcNode =new Node();
 	private Node destNode =new Node();
 
-	private Map<Integer,List<Prediction>> predictions = new HashMap<Integer,List<Prediction>>(); ;//day at index, list of predictions in list
+	private List<ArrayList<Prediction>> predictions=new ArrayList<ArrayList<Prediction>>();
+
+
+
+	//private Map<Integer,List<Prediction>> predictions = new HashMap<Integer,List<Prediction>>(); ;//day at index, list of predictions in list
 	private Map<Integer,List<ActualTraffic>> actualTraffic = new HashMap<Integer,List<ActualTraffic>>(); //either map or class ActualTraffic !!!!!!!!!
 
 	//Constructor
@@ -145,6 +149,7 @@ public class Graph {
 		for (Edge e : this.edgesList) {
 			
 			Prediction p = findPredByNameAndDay(e.getRoadName(), day);
+			//System.out.println("p1:"+p.getP1()+"\np2:"+p.getP2()+"\np3:"+p.getP3()  );
 			if(  rand<=p.getP1()  )
 			{
 				continue;
@@ -155,7 +160,7 @@ public class Graph {
 				}
 				else {
 					p.setTraffic(p.getTraffic()-1);
-					System.out.println("Meiwthike to traffic");
+					//System.out.println("Meiwthike to traffic");
 				}
 			}
 			else
@@ -165,7 +170,7 @@ public class Graph {
 				}
 				else {
 					p.setTraffic(p.getTraffic()+1);
-					System.out.println("aukshthike to traffic");
+					//System.out.println("aukshthike to traffic");
 				}
 			}
 			
@@ -301,19 +306,19 @@ public class Graph {
 	
 
 	public void initDayPred(int day) {
-		this.predictions.put(day, new ArrayList<Prediction>());
+		this.predictions.add( new ArrayList<Prediction>());
 	}
 	
 	public void addPrediction(int day, String rn, int tr) {
 		
 
 		
-		for (int d : this.predictions.keySet()) {
-			if(day == d) {
+		//for (int d : this.predictions.get(day)) {
+			//if(day == d) {
 				
-				this.predictions.get(d).add(new Prediction(rn, tr)) ;
-			}			
-		}
+				this.predictions.get(day).add(new Prediction(rn, tr)) ;
+			//}			
+		//}
 		
 
 		
@@ -330,12 +335,12 @@ public class Graph {
 		
 
 		
-		for (int d : this.actualTraffic.keySet()) {
-			if(day == d) {
+		//for (int d : this.actualTraffic.keySet()) {
+			//if(day == d) {
 				
-				this.actualTraffic.get(d).add(new ActualTraffic(rn, tr)) ;
-			}			
-		}
+				this.actualTraffic.get(day).add(new ActualTraffic(rn, tr)) ;
+			//}			
+		//}
 		
 
 		
@@ -363,15 +368,15 @@ public class Graph {
 		this.edgesList = edgesList;
 	}
 
-	public Map<Integer, List<Prediction>> getPredictions() {
+
+	public List<ArrayList<Prediction>> getPredictions() {
 		return predictions;
 	}
 
-
-
-	public void setPredictions(Map<Integer, List<Prediction>> predictions) {
+	public void setPredictions(List<ArrayList<Prediction>> predictions) {
 		this.predictions = predictions;
 	}
+
 
 
 
