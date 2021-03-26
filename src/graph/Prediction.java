@@ -8,7 +8,7 @@ public class Prediction {
 	
 	//private Map<String, String> predMap = new HashMap<String, String>(); //day -> traffic
 	private String roadName;
-	private static double p1 = 0.6,p2 = 0.3,p3 = 0.1;
+	private static double p1 = 0.5, p2 = 0.3, p3 = 0.2;// p1 --> equals,  p2 --> pred-1, p3 --> pred+1
 	private int successRatio;
 	private int traffic;   //-1 = low, 0 = normal, 1 = high
 
@@ -20,19 +20,25 @@ public class Prediction {
 		this.traffic = tr;
 	}
 	
-	public void updateP(int actTrafficNext) {   // actual traffic of day
-		this.successRatio=0;
-		if (this.traffic < actTrafficNext) {
-			this.successRatio--;
-		}
-		else if (this.traffic == actTrafficNext) {
-			
-		}
-		else {
-			this.successRatio++;
-		}
-		
+	public void updateP(int i,int size) {   // actual traffic of day
 		//update p 
+		switch(i)
+		{
+			case 1:
+				p1 = p1 + 1/size;
+				p2 = p2 - (1/size*2);
+				p3 = p3 - (1/size*2);
+				break;
+			case 2:
+				p1 = p1 - (1/size*2);
+				p2 = p2 + 1/size;
+				p3 = p3 - (1/size*2);
+				break;
+			default:
+				p1 = p1 - (1/size*2);
+				p2 = p2 - (1/size*2);
+				p3 = p3 + 1/size;
+		}
 		
 	}
 	

@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Stack;
+import java.lang.Math ;
 
 import graph.Edge;
 
@@ -78,6 +79,7 @@ public class Graph {
 	
 	
 	public void predictTrafficInDay(int day) {
+		
 		for (Edge e : this.edgesList) {
 			Prediction p = findPredByNameAndDay(e.getRoadName(), day);
 			if (p.getTraffic() == -1) {
@@ -96,6 +98,7 @@ public class Graph {
 	
 	public ActualTraffic findTrafficByNameAndDay(String name,int day) {
 		for (ActualTraffic a : this.actualTraffic.get(day)) {
+			
 			if (a.getRoadName().equals(name)) {
 				return a;
 			}
@@ -103,20 +106,71 @@ public class Graph {
 		return null; //if it didnt find it
 	}
 	
-	public void setActualTrafficInDay(int day) {
+	public void setActual_updatePreds(int day) {
+
 		for (Edge e : this.edgesList) {
-			ActualTraffic p = findTrafficByNameAndDay(e.getRoadName(), day);
-			if (p.getTraffic() == -1) {
+			ActualTraffic actuaTr = findTrafficByNameAndDay(e.getRoadName(), day);
+			if (actuaTr.getTraffic() == -1) {
 				//low traffic
 				e.setRealWeight(e.getWeight()-0.1*e.getWeight());
-			} else if (p.getTraffic() == 0) {
+			} else if (actuaTr.getTraffic() == 0) {
 				//normal traffic
 				e.setRealWeight(e.getWeight());
 			} else {
 				//heavy traffic
 				e.setRealWeight(e.getWeight()+0.25*e.getWeight());
 			}
+			
+			Prediction predTr=findPredByNameAndDay(e.getRoadName(), day);
+			if(actuaTr.getTraffic()==predTr.getTraffic())
+			{
+				predTr.updateP(1,this.edgesList.size());
+			}
+			else if(actuaTr.getTraffic()<predTr.getTraffic())
+			{
+				predTr.updateP(2,this.edgesList.size());
+			}
+			else {
+				predTr.updateP(3,this.edgesList.size());
+			}
+			
 		}
+	}
+	
+	
+	public void changePred(int day)
+	{
+		double rand=Math.random();
+		System.out.println("rand:"+rand);
+		for (Edge e : this.edgesList) {
+			
+			Prediction p = findPredByNameAndDay(e.getRoadName(), day);
+			if(  rand<=p.getP1()  )
+			{
+				continue;
+			}
+			else if (rand<=p.getP2()) {
+				if(p.getTraffic()==-1) {
+					continue;
+				}
+				else {
+					p.setTraffic(p.getTraffic()-1);
+					System.out.println("Meiwthike to traffic");
+				}
+			}
+			else
+			{
+				if(p.getTraffic()==1) {
+					continue;
+				}
+				else {
+					p.setTraffic(p.getTraffic()+1);
+					System.out.println("aukshthike to traffic");
+				}
+			}
+			
+		}
+		
 	}
 	
 
@@ -124,6 +178,7 @@ public class Graph {
 	public Prediction findPredByNameAndDay(String name,int day) {
 		for (Prediction p : this.predictions.get(day)) {
 			if (p.getRoadName().equals(name)) {
+				
 				return p;
 			}
 		}
@@ -285,6 +340,14 @@ public class Graph {
 
 		
 	}
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	//Setters-Getters

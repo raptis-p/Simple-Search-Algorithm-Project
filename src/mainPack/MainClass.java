@@ -54,7 +54,9 @@ public class MainClass {
 		//maybe remove some streets with same src-dest and 
 		//big difference in weight values
 		
-		for (int day=0;day<2;day++) {
+		
+		
+		for (int day=0;day<80;day++) {
 			myGraph.resetCosts_Path();
 //			System.out.println("--------- fdjfdffd    fdsfdsfd   alaksaaaaaaaaa----------------");
 //			System.out.println("Day : "+day);
@@ -88,8 +90,22 @@ public class MainClass {
 			
 			
 			//set actual traffic values
-			myGraph.setActualTrafficInDay(day);
-		
+			myGraph.setActual_updatePreds(day);
+			
+			int c=0;
+			System.out.println("----------------");
+			System.out.println("Success rate");
+			for(Edge e:myGraph.getEdgesList())
+			{	
+				if(e.getPredictedWeight()==e.getRealWeight())
+				{
+					
+					c++;
+				}
+			}
+			double ratio=c;
+			System.out.println(ratio/myGraph.getEdgesList().size());
+			
 			//print Visited Nodes Number, (exec time)
 			//sequence of edges(with their weights), total predicted cost
 			//and total real cost
@@ -138,6 +154,8 @@ public class MainClass {
 			System.out.println("---------------------------------------------------");
 			//update p1,p2,p3
 			
+			
+			myGraph.changePred(day);
 			//go to next day
 		}
 		
