@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Stack;
 import java.lang.Math ;
+import java.util.Random;
 
 import graph.Edge;
 
@@ -112,6 +113,7 @@ public class Graph {
 	
 	public void setActual_updatePreds(int day) {
 
+		int countP1 = 0, countP2 = 0, countP3 = 0;
 		for (Edge e : this.edgesList) {
 			ActualTraffic actuaTr = findTrafficByNameAndDay(e.getRoadName(), day);
 			if (actuaTr.getTraffic() == -1) {
@@ -128,24 +130,53 @@ public class Graph {
 			Prediction predTr=findPredByNameAndDay(e.getRoadName(), day);
 			if(actuaTr.getTraffic()==predTr.getTraffic())
 			{
-				predTr.updateP(1,this.edgesList.size());
+				countP1++;
+//				predTr.updateP(1,this.edgesList.size());
 			}
 			else if(actuaTr.getTraffic()<predTr.getTraffic())
 			{
-				predTr.updateP(2,this.edgesList.size());
+//				predTr.updateP(2,this.edgesList.size());
+				countP2++;
 			}
 			else {
-				predTr.updateP(3,this.edgesList.size());
+//				predTr.updateP(3,this.edgesList.size());
+				countP3++;
 			}
 			
 		}
+		
+		if (countP1 > Math.max(countP2, countP3)) {
+			Prediction.updateP(1,this.edgesList.size());
+		} else if (countP2 > Math.max(countP1, countP3)) {
+			Prediction.updateP(2,this.edgesList.size());
+		} else {
+			Prediction.updateP(3,this.edgesList.size());
+		}
+		
 	}
 	
+	public double normalize(double x) {
+		
+		while (true) {
+			if (x<0) {
+				x= -x;
+			}
+			if (x>1) {
+				x--;
+			}
+			if (x<1 && x>0) break;
+		}
+		return x;
+	}
 	
 	public void changePred(int day)
 	{
 		double rand=Math.random();
-		System.out.println("rand:"+rand);
+		//Random r = new Random();
+		//rand =r.nextGaussian();
+		
+		rand = normalize(rand);
+//		System.out.println("rand:"+rand);
 		for (Edge e : this.edgesList) {
 			
 			Prediction p = findPredByNameAndDay(e.getRoadName(), day);
@@ -209,6 +240,23 @@ public class Graph {
 		
 	}
 	
+	public Edge findEdgeWithMinWeight(Node n1, Node n2)  ////////////////// FINDDDD MIIIIINNNNN
+	{
+		double min=999999999;
+		Edge e1 = null;
+		for(Edge e:this.edgesList)
+		{
+			if(e.containsNode(n1) && e.containsNode(n2))
+			{
+				if(e.getPredictedWeight()<min)
+				{
+					e1 = e;
+				}
+			}
+		}
+		return e1;
+		
+	}
 	
 	
 	public double findRealWeight(Node n1, Node n2) {
@@ -230,16 +278,19 @@ public class Graph {
 	
 	public void calculateHeuristic() {
 		
+		
+		this.resetVisitsAndPath();
 		Stack<Node> stack = new Stack<Node>();
 		Node current;
 		
 		stack.push(this.destNode);
-		
+		this.destNode.setHeuristic(0);
 		while (!stack.isEmpty()) {
 			
 			current = stack.pop();
 			
 			if (!current.isVisited()) {
+//				System.out.println("Isn't visited");
 				current.setVisited(true);
 				
 				//System.out.println("-----------------");
@@ -254,9 +305,10 @@ public class Graph {
 									n1=help;
 								}
 							}
-							if (!n1.isVisited()) {
-								n1.setHeuristic(n1.getHeuristic() + 20);
-							}
+//							if (!n1.isVisited()) {
+//								
+								n1.setHeuristic(0.9*(n.getHeuristic() + this.avgWeight()));
+//							}
 							stack.push(n1);	
 						}
 					}
@@ -264,6 +316,16 @@ public class Graph {
 			}
 		}
 		//this.resetCosts_Path();
+	}
+	
+	
+	
+	public double avgWeight() {
+		double sum = 0;
+		for (Edge e: this.edgesList) {
+			sum+= e.getPredictedWeight();
+		}
+		return sum/this.edgesList.size();
 	}
 	
 	
@@ -283,6 +345,7 @@ public class Graph {
 			for(Node n1:n.getNeighbors())
 			{
 				n1.setCost(0);
+				n1.setRealCost(0);
 				n1.setVisited(false);
 			}
 		}
@@ -294,9 +357,11 @@ public class Graph {
 		{
 			
 			n.setCost(0);
+			n.setRealCost(0);
 			n.setVisited(false);
 			for(Node n1:n.getNeighbors())
 			{
+				n1.setRealCost(0);
 				n1.setCost(0);
 				n1.setVisited(false);
 			}

@@ -1,0 +1,1040 @@
+==================================================
+Day1
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(72.0)->  9Node6e(64.1)->  9Node3e(83.2)->  9Node8e(86.5)->  9Node5e(90.1)->->  9Node0e(113.1)
+	Predicted Cost : 113.1
+	Real Cost : 0.0
+IDA*: 
+	Visited Nodes Number(total) : 85
+	Visited Nodes Number(last iteration) : 15
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(72.0)->  9Node6e(64.1)->  9Node3e(83.2)->  9Node8e(86.5)->  9Node5e(90.1)->->  9Node0e(113.1)
+	Predicted Cost : 113.1
+	Real Cost : 0.0
+==================================================
+Day2
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(13.75)->  9Node4e(47.95)->  9Node1e(59.2)->  9Node7e(73.2)->  9Node8e(77.95)->  9Node6e(59.650000000000006)->  9Node5e(83.05000000000001)->->  9Node0e(103.75000000000001)
+	Predicted Cost : 103.75000000000001
+	Real Cost : 130.25
+IDA*: 
+	Visited Nodes Number(total) : 43
+	Visited Nodes Number(last iteration) : 12
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(13.75)->  9Node4e(47.95)->  9Node1e(59.2)->  9Node7e(73.2)->  9Node8e(77.95)->  9Node6e(59.650000000000006)->  9Node5e(83.05000000000001)->->  9Node0e(103.75000000000001)
+	Predicted Cost : 103.75000000000001
+	Real Cost : 130.25
+==================================================
+Day3
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(75.5)->  9Node8e(79.0)->  9Node6e(62.0)->  9Node5e(85.4)->->  9Node0e(108.4)
+	Predicted Cost : 108.4
+	Real Cost : 106.35000000000001
+IDA*: 
+	Visited Nodes Number(total) : 56
+	Visited Nodes Number(last iteration) : 13
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(75.5)->  9Node8e(79.0)->  9Node6e(62.0)->  9Node5e(85.4)->->  9Node0e(108.4)
+	Predicted Cost : 108.4
+	Real Cost : 106.35000000000001
+==================================================
+Day4
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(13.75)->  9Node4e(61.25)->  9Node1e(70.25)->  9Node7e(82.85)->  9Node8e(88.25)->  9Node6e(74.25)->  9Node5e(103.25)->->  9Node0e(129.65)
+	Predicted Cost : 129.65
+	Real Cost : 120.2
+IDA*: 
+	Visited Nodes Number(total) : 139
+	Visited Nodes Number(last iteration) : 18
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(13.75)->  9Node4e(61.25)->  9Node1e(70.25)->  9Node7e(82.85)->  9Node8e(88.25)->  9Node6e(74.25)->  9Node5e(103.25)->->  9Node0e(129.65)
+	Predicted Cost : 129.65
+	Real Cost : 120.2
+==================================================
+Day5
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(13.75)->  9Node4e(51.75)->  9Node1e(60.75)->  9Node7e(78.25)->  9Node8e(78.75)->  9Node6e(68.0)->  9Node5e(90.75)->->  9Node0e(113.75)
+	Predicted Cost : 113.75
+	Real Cost : 142.5
+IDA*: 
+	Visited Nodes Number(total) : 89
+	Visited Nodes Number(last iteration) : 16
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(13.75)->  9Node4e(51.75)->  9Node1e(60.75)->  9Node7e(78.25)->  9Node8e(78.75)->  9Node6e(68.0)->  9Node5e(90.75)->->  9Node0e(113.75)
+	Predicted Cost : 113.75
+	Real Cost : 142.5
+==================================================
+Day6
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(58.5)->  9Node1e(66.6)->  9Node6e(70.0)->  9Node7e(84.1)->  9Node5e(93.4)->  9Node3e(85.4)->  9Node8e(95.39999999999999)->->  9Node0e(116.4)
+	Predicted Cost : 116.4
+	Real Cost : 121.75
+IDA*: 
+	Visited Nodes Number(total) : 109
+	Visited Nodes Number(last iteration) : 16
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(58.5)->  9Node1e(66.6)->  9Node6e(70.0)->  9Node7e(84.1)->  9Node5e(93.4)->  9Node3e(85.4)->  9Node8e(95.39999999999999)->->  9Node0e(116.4)
+	Predicted Cost : 116.4
+	Real Cost : 121.75
+==================================================
+Day7
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(45.2)->  9Node1e(54.2)->  9Node7e(68.2)->  9Node6e(56.900000000000006)->  9Node3e(81.7)->  9Node8e(82.7)->  9Node5e(82.9)->->  9Node0e(105.9)
+	Predicted Cost : 105.9
+	Real Cost : 120.5
+IDA*: 
+	Visited Nodes Number(total) : 43
+	Visited Nodes Number(last iteration) : 12
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(45.2)->  9Node1e(54.2)->  9Node7e(68.2)->  9Node6e(56.900000000000006)->  9Node3e(81.7)->  9Node8e(82.7)->  9Node5e(82.9)->->  9Node0e(105.9)
+	Predicted Cost : 105.9
+	Real Cost : 120.5
+==================================================
+Day8
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(45.2)->  9Node1e(56.45)->  9Node7e(69.05)->  9Node8e(75.2)->  9Node6e(61.45)->  9Node5e(87.2)->->  9Node0e(110.2)
+	Predicted Cost : 110.2
+	Real Cost : 103.7
+IDA*: 
+	Visited Nodes Number(total) : 56
+	Visited Nodes Number(last iteration) : 13
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(45.2)->  9Node1e(56.45)->  9Node7e(69.05)->  9Node8e(75.2)->  9Node6e(61.45)->  9Node5e(87.2)->->  9Node0e(110.2)
+	Predicted Cost : 110.2
+	Real Cost : 103.7
+==================================================
+Day9
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(58.5)->  9Node1e(67.5)->  9Node7e(80.1)->  9Node6e(70.0)->  9Node3e(80.9)->  9Node8e(88.5)->  9Node5e(93.4)->->  9Node0e(122.15)
+	Predicted Cost : 122.15
+	Real Cost : 133.75
+IDA*: 
+	Visited Nodes Number(total) : 118
+	Visited Nodes Number(last iteration) : 17
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(58.5)->  9Node1e(67.5)->  9Node7e(80.1)->  9Node6e(70.0)->  9Node3e(80.9)->  9Node8e(88.5)->  9Node5e(93.4)->->  9Node0e(122.15)
+	Predicted Cost : 122.15
+	Real Cost : 133.75
+==================================================
+Day10
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(72.0)->  9Node8e(79.0)->  9Node6e(65.25)->  9Node5e(89.8)->->  9Node0e(117.1)
+	Predicted Cost : 117.1
+	Real Cost : 115.7
+IDA*: 
+	Visited Nodes Number(total) : 101
+	Visited Nodes Number(last iteration) : 16
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(72.0)->  9Node8e(79.0)->  9Node6e(65.25)->  9Node5e(89.8)->->  9Node0e(117.1)
+	Predicted Cost : 117.1
+	Real Cost : 115.7
+==================================================
+Day11
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(13.75)->  9Node4e(51.75)->  9Node1e(60.75)->  9Node7e(78.25)->  9Node8e(81.75)->  9Node6e(63.45)->  9Node5e(86.85)->->  9Node0e(109.85)
+	Predicted Cost : 109.85
+	Real Cost : 120.0
+IDA*: 
+	Visited Nodes Number(total) : 70
+	Visited Nodes Number(last iteration) : 14
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(13.75)->  9Node4e(51.75)->  9Node1e(60.75)->  9Node7e(78.25)->  9Node8e(81.75)->  9Node6e(63.45)->  9Node5e(86.85)->->  9Node0e(109.85)
+	Predicted Cost : 109.85
+	Real Cost : 120.0
+==================================================
+Day12
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(13.75)->  9Node4e(61.25)->  9Node1e(70.25)->  9Node6e(72.75)->  9Node7e(82.85)->  9Node5e(96.15)->  9Node3e(86.65)->  9Node8e(98.75)->->  9Node0e(119.15)
+	Predicted Cost : 119.15
+	Real Cost : 133.9
+IDA*: 
+	Visited Nodes Number(total) : 116
+	Visited Nodes Number(last iteration) : 16
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(13.75)->  9Node4e(61.25)->  9Node1e(70.25)->  9Node6e(72.75)->  9Node7e(82.85)->  9Node5e(96.15)->  9Node3e(86.65)->  9Node8e(98.75)->->  9Node0e(119.15)
+	Predicted Cost : 119.15
+	Real Cost : 133.9
+==================================================
+Day13
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(13.75)->  9Node4e(47.95)->  9Node1e(56.95)->  9Node6e(60.95)->  9Node7e(70.95)->  9Node5e(84.35)->  9Node3e(83.80000000000001)->  9Node8e(85.45)->->  9Node0e(107.35)
+	Predicted Cost : 107.35
+	Real Cost : 107.35
+IDA*: 
+	Visited Nodes Number(total) : 70
+	Visited Nodes Number(last iteration) : 14
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(13.75)->  9Node4e(47.95)->  9Node1e(56.95)->  9Node6e(60.95)->  9Node7e(70.95)->  9Node5e(84.35)->  9Node3e(83.80000000000001)->  9Node8e(85.45)->->  9Node0e(107.35)
+	Predicted Cost : 107.35
+	Real Cost : 107.35
+==================================================
+Day14
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(45.2)->  9Node1e(54.2)->  9Node7e(68.2)->  9Node8e(72.2)->  9Node6e(56.900000000000006)->  9Node5e(82.9)->->  9Node0e(103.60000000000001)
+	Predicted Cost : 103.60000000000001
+	Real Cost : 120.25
+IDA*: 
+	Visited Nodes Number(total) : 43
+	Visited Nodes Number(last iteration) : 12
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(45.2)->  9Node1e(54.2)->  9Node7e(68.2)->  9Node8e(72.2)->  9Node6e(56.900000000000006)->  9Node5e(82.9)->->  9Node0e(103.60000000000001)
+	Predicted Cost : 103.60000000000001
+	Real Cost : 120.25
+==================================================
+Day15
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(45.2)->  9Node1e(56.45)->  9Node8e(72.2)->  9Node6e(56.900000000000006)->  9Node7e(73.95)->  9Node5e(80.30000000000001)->->  9Node0e(103.30000000000001)
+	Predicted Cost : 103.30000000000001
+	Real Cost : 111.65
+IDA*: 
+	Visited Nodes Number(total) : 43
+	Visited Nodes Number(last iteration) : 12
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(45.2)->  9Node1e(56.45)->  9Node8e(72.2)->  9Node6e(56.900000000000006)->  9Node7e(73.95)->  9Node5e(80.30000000000001)->->  9Node0e(103.30000000000001)
+	Predicted Cost : 103.30000000000001
+	Real Cost : 111.65
+==================================================
+Day16
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(70.6)->  9Node6e(60.7)->  9Node3e(77.6)->  9Node8e(86.5)->  9Node5e(86.7)->->  9Node0e(109.7)
+	Predicted Cost : 109.7
+	Real Cost : 116.6
+IDA*: 
+	Visited Nodes Number(total) : 101
+	Visited Nodes Number(last iteration) : 16
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(70.6)->  9Node6e(60.7)->  9Node3e(77.6)->  9Node8e(86.5)->  9Node5e(86.7)->->  9Node0e(109.7)
+	Predicted Cost : 109.7
+	Real Cost : 116.6
+==================================================
+Day17
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(72.0)->  9Node8e(76.0)->  9Node6e(65.25)->  9Node5e(86.8)->->  9Node0e(109.8)
+	Predicted Cost : 109.8
+	Real Cost : 123.5
+IDA*: 
+	Visited Nodes Number(total) : 56
+	Visited Nodes Number(last iteration) : 13
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(72.0)->  9Node8e(76.0)->  9Node6e(65.25)->  9Node5e(86.8)->->  9Node0e(109.8)
+	Predicted Cost : 109.8
+	Real Cost : 123.5
+==================================================
+Day18
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(60.25)->  9Node7e(74.25)->  9Node8e(76.0)->  9Node6e(62.0)->  9Node5e(86.8)->->  9Node0e(109.8)
+	Predicted Cost : 109.8
+	Real Cost : 116.75
+IDA*: 
+	Visited Nodes Number(total) : 70
+	Visited Nodes Number(last iteration) : 14
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(60.25)->  9Node7e(74.25)->  9Node8e(76.0)->  9Node6e(62.0)->  9Node5e(86.8)->->  9Node0e(109.8)
+	Predicted Cost : 109.8
+	Real Cost : 116.75
+==================================================
+Day19
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(72.0)->  9Node8e(79.0)->  9Node6e(60.7)->  9Node5e(86.7)->->  9Node0e(115.45)
+	Predicted Cost : 115.45
+	Real Cost : 117.9
+IDA*: 
+	Visited Nodes Number(total) : 88
+	Visited Nodes Number(last iteration) : 16
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(72.0)->  9Node8e(79.0)->  9Node6e(60.7)->  9Node5e(86.7)->->  9Node0e(115.45)
+	Predicted Cost : 115.45
+	Real Cost : 117.9
+==================================================
+Day20
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(9.9)->  9Node4e(44.1)->  9Node1e(52.2)->  9Node7e(64.8)->  9Node8e(74.1)->  9Node6e(55.8)->  9Node5e(79.19999999999999)->->  9Node0e(102.19999999999999)
+	Predicted Cost : 102.19999999999999
+	Real Cost : 126.9
+IDA*: 
+	Visited Nodes Number(total) : 43
+	Visited Nodes Number(last iteration) : 12
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(9.9)->  9Node4e(44.1)->  9Node1e(52.2)->  9Node7e(64.8)->  9Node8e(74.1)->  9Node6e(55.8)->  9Node5e(79.19999999999999)->->  9Node0e(102.19999999999999)
+	Predicted Cost : 102.19999999999999
+	Real Cost : 126.9
+==================================================
+Day21
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(58.5)->  9Node1e(67.5)->  9Node6e(70.0)->  9Node7e(85.0)->  9Node5e(96.0)->  9Node3e(89.1)->  9Node8e(96.0)->->  9Node0e(119.0)
+	Predicted Cost : 119.0
+	Real Cost : 118.5
+IDA*: 
+	Visited Nodes Number(total) : 106
+	Visited Nodes Number(last iteration) : 16
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(58.5)->  9Node1e(67.5)->  9Node6e(70.0)->  9Node7e(85.0)->  9Node5e(96.0)->  9Node3e(89.1)->  9Node8e(96.0)->->  9Node0e(119.0)
+	Predicted Cost : 119.0
+	Real Cost : 118.5
+==================================================
+Day22
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(45.2)->  9Node1e(54.2)->  9Node7e(71.7)->  9Node8e(75.2)->  9Node6e(61.45)->  9Node5e(84.85)->->  9Node0e(107.85)
+	Predicted Cost : 107.85
+	Real Cost : 116.6
+IDA*: 
+	Visited Nodes Number(total) : 70
+	Visited Nodes Number(last iteration) : 14
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(45.2)->  9Node1e(54.2)->  9Node7e(71.7)->  9Node8e(75.2)->  9Node6e(61.45)->  9Node5e(84.85)->->  9Node0e(107.85)
+	Predicted Cost : 107.85
+	Real Cost : 116.6
+==================================================
+Day23
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(58.5)->  9Node1e(67.5)->  9Node6e(64.1)->  9Node3e(79.4)->  9Node7e(81.5)->  9Node8e(85.5)->  9Node5e(87.5)->->  9Node0e(110.5)
+	Predicted Cost : 110.5
+	Real Cost : 133.9
+IDA*: 
+	Visited Nodes Number(total) : 85
+	Visited Nodes Number(last iteration) : 15
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(58.5)->  9Node1e(67.5)->  9Node6e(64.1)->  9Node3e(79.4)->  9Node7e(81.5)->  9Node8e(85.5)->  9Node5e(87.5)->->  9Node0e(110.5)
+	Predicted Cost : 110.5
+	Real Cost : 133.9
+==================================================
+Day24
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(45.2)->  9Node1e(56.45)->  9Node7e(69.05)->  9Node6e(56.900000000000006)->  9Node3e(82.45)->  9Node8e(82.7)->  9Node5e(82.9)->->  9Node0e(105.9)
+	Predicted Cost : 105.9
+	Real Cost : 117.9
+IDA*: 
+	Visited Nodes Number(total) : 56
+	Visited Nodes Number(last iteration) : 13
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(45.2)->  9Node1e(56.45)->  9Node7e(69.05)->  9Node6e(56.900000000000006)->  9Node3e(82.45)->  9Node8e(82.7)->  9Node5e(82.9)->->  9Node0e(105.9)
+	Predicted Cost : 105.9
+	Real Cost : 117.9
+==================================================
+Day25
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(45.2)->  9Node1e(54.2)->  9Node7e(68.2)->  9Node8e(72.2)->  9Node6e(58.2)->  9Node5e(84.2)->->  9Node0e(107.2)
+	Predicted Cost : 107.2
+	Real Cost : 118.2
+IDA*: 
+	Visited Nodes Number(total) : 43
+	Visited Nodes Number(last iteration) : 12
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(45.2)->  9Node1e(54.2)->  9Node7e(68.2)->  9Node8e(72.2)->  9Node6e(58.2)->  9Node5e(84.2)->->  9Node0e(107.2)
+	Predicted Cost : 107.2
+	Real Cost : 118.2
+==================================================
+Day26
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(45.2)->  9Node1e(54.2)->  9Node7e(71.7)->  9Node8e(75.2)->  9Node6e(58.2)->  9Node5e(81.6)->->  9Node0e(104.6)
+	Predicted Cost : 104.6
+	Real Cost : 111.0
+IDA*: 
+	Visited Nodes Number(total) : 56
+	Visited Nodes Number(last iteration) : 13
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(45.2)->  9Node1e(54.2)->  9Node7e(71.7)->  9Node8e(75.2)->  9Node6e(58.2)->  9Node5e(81.6)->->  9Node0e(104.6)
+	Predicted Cost : 104.6
+	Real Cost : 111.0
+==================================================
+Day27
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(9.9)->  9Node4e(57.4)->  9Node1e(66.4)->  9Node6e(68.9)->  9Node3e(82.1)->  9Node7e(83.9)->  9Node5e(92.30000000000001)->  9Node8e(94.9)->->  9Node0e(115.30000000000001)
+	Predicted Cost : 115.30000000000001
+	Real Cost : 123.2
+IDA*: 
+	Visited Nodes Number(total) : 109
+	Visited Nodes Number(last iteration) : 16
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(9.9)->  9Node4e(57.4)->  9Node1e(66.4)->  9Node6e(68.9)->  9Node3e(82.1)->  9Node7e(83.9)->  9Node5e(92.30000000000001)->  9Node8e(94.9)->->  9Node0e(115.30000000000001)
+	Predicted Cost : 115.30000000000001
+	Real Cost : 123.2
+==================================================
+Day28
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node6e(60.7)->  9Node7e(72.0)->  9Node5e(84.1)->  9Node3e(85.4)->  9Node8e(86.5)->->  9Node0e(107.1)
+	Predicted Cost : 107.1
+	Real Cost : 114.4
+IDA*: 
+	Visited Nodes Number(total) : 56
+	Visited Nodes Number(last iteration) : 13
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node6e(60.7)->  9Node7e(72.0)->  9Node5e(84.1)->  9Node3e(85.4)->  9Node8e(86.5)->->  9Node0e(107.1)
+	Predicted Cost : 107.1
+	Real Cost : 114.4
+==================================================
+Day29
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(45.2)->  9Node1e(56.45)->  9Node7e(70.45)->  9Node8e(75.2)->  9Node6e(61.45)->  9Node5e(87.2)->->  9Node0e(110.2)
+	Predicted Cost : 110.2
+	Real Cost : 112.8
+IDA*: 
+	Visited Nodes Number(total) : 70
+	Visited Nodes Number(last iteration) : 14
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(45.2)->  9Node1e(56.45)->  9Node7e(70.45)->  9Node8e(75.2)->  9Node6e(61.45)->  9Node5e(87.2)->->  9Node0e(110.2)
+	Predicted Cost : 110.2
+	Real Cost : 112.8
+==================================================
+Day30
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(60.25)->  9Node8e(76.0)->  9Node6e(60.7)->  9Node3e(77.6)->  9Node7e(77.75)->  9Node5e(84.1)->->  9Node0e(107.1)
+	Predicted Cost : 107.1
+	Real Cost : 107.85
+IDA*: 
+	Visited Nodes Number(total) : 56
+	Visited Nodes Number(last iteration) : 13
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(60.25)->  9Node8e(76.0)->  9Node6e(60.7)->  9Node3e(77.6)->  9Node7e(77.75)->  9Node5e(84.1)->->  9Node0e(107.1)
+	Predicted Cost : 107.1
+	Real Cost : 107.85
+==================================================
+Day31
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(72.0)->  9Node8e(79.0)->  9Node6e(62.0)->  9Node5e(88.0)->->  9Node0e(111.0)
+	Predicted Cost : 111.0
+	Real Cost : 116.2
+IDA*: 
+	Visited Nodes Number(total) : 85
+	Visited Nodes Number(last iteration) : 15
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(72.0)->  9Node8e(79.0)->  9Node6e(62.0)->  9Node5e(88.0)->->  9Node0e(111.0)
+	Predicted Cost : 111.0
+	Real Cost : 116.2
+==================================================
+Day32
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(72.0)->  9Node8e(79.0)->  9Node6e(62.0)->  9Node5e(91.0)->->  9Node0e(119.75)
+	Predicted Cost : 119.75
+	Real Cost : 121.5
+IDA*: 
+	Visited Nodes Number(total) : 118
+	Visited Nodes Number(last iteration) : 17
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(72.0)->  9Node8e(79.0)->  9Node6e(62.0)->  9Node5e(91.0)->->  9Node0e(119.75)
+	Predicted Cost : 119.75
+	Real Cost : 121.5
+==================================================
+Day33
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(58.5)->  9Node1e(67.5)->  9Node7e(80.1)->  9Node6e(70.0)->  9Node3e(83.9)->  9Node8e(85.5)->  9Node5e(96.0)->->  9Node0e(119.0)
+	Predicted Cost : 119.0
+	Real Cost : 114.10000000000001
+IDA*: 
+	Visited Nodes Number(total) : 109
+	Visited Nodes Number(last iteration) : 16
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(58.5)->  9Node1e(67.5)->  9Node7e(80.1)->  9Node6e(70.0)->  9Node3e(83.9)->  9Node8e(85.5)->  9Node5e(96.0)->->  9Node0e(119.0)
+	Predicted Cost : 119.0
+	Real Cost : 114.10000000000001
+==================================================
+Day34
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(70.6)->  9Node8e(76.0)->  9Node6e(64.1)->  9Node5e(87.5)->->  9Node0e(110.5)
+	Predicted Cost : 110.5
+	Real Cost : 119.0
+IDA*: 
+	Visited Nodes Number(total) : 70
+	Visited Nodes Number(last iteration) : 14
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(70.6)->  9Node8e(76.0)->  9Node6e(64.1)->  9Node5e(87.5)->->  9Node0e(110.5)
+	Predicted Cost : 110.5
+	Real Cost : 119.0
+==================================================
+Day35
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(70.6)->  9Node8e(76.0)->  9Node6e(62.0)->  9Node5e(88.0)->->  9Node0e(111.0)
+	Predicted Cost : 111.0
+	Real Cost : 131.0
+IDA*: 
+	Visited Nodes Number(total) : 72
+	Visited Nodes Number(last iteration) : 15
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(70.6)->  9Node8e(76.0)->  9Node6e(62.0)->  9Node5e(88.0)->->  9Node0e(111.0)
+	Predicted Cost : 111.0
+	Real Cost : 131.0
+==================================================
+Day36
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(58.5)->  9Node1e(67.5)->  9Node6e(70.0)->  9Node7e(81.5)->  9Node5e(93.4)->  9Node3e(85.0)->  9Node8e(96.0)->->  9Node0e(116.4)
+	Predicted Cost : 116.4
+	Real Cost : 125.5
+IDA*: 
+	Visited Nodes Number(total) : 116
+	Visited Nodes Number(last iteration) : 16
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(58.5)->  9Node1e(67.5)->  9Node6e(70.0)->  9Node7e(81.5)->  9Node5e(93.4)->  9Node3e(85.0)->  9Node8e(96.0)->->  9Node0e(116.4)
+	Predicted Cost : 116.4
+	Real Cost : 125.5
+==================================================
+Day37
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(45.2)->  9Node1e(53.300000000000004)->  9Node7e(67.30000000000001)->  9Node8e(75.2)->  9Node6e(61.45)->  9Node5e(87.2)->->  9Node0e(110.2)
+	Predicted Cost : 110.2
+	Real Cost : 110.2
+IDA*: 
+	Visited Nodes Number(total) : 85
+	Visited Nodes Number(last iteration) : 15
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(45.2)->  9Node1e(53.300000000000004)->  9Node7e(67.30000000000001)->  9Node8e(75.2)->  9Node6e(61.45)->  9Node5e(87.2)->->  9Node0e(110.2)
+	Predicted Cost : 110.2
+	Real Cost : 110.2
+==================================================
+Day38
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(9.9)->  9Node4e(44.1)->  9Node1e(53.1)->  9Node7e(70.6)->  9Node8e(71.1)->  9Node6e(57.1)->  9Node5e(80.5)->->  9Node0e(103.5)
+	Predicted Cost : 103.5
+	Real Cost : 114.65
+IDA*: 
+	Visited Nodes Number(total) : 31
+	Visited Nodes Number(last iteration) : 11
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(9.9)->  9Node4e(44.1)->  9Node1e(53.1)->  9Node7e(70.6)->  9Node8e(71.1)->  9Node6e(57.1)->  9Node5e(80.5)->->  9Node0e(103.5)
+	Predicted Cost : 103.5
+	Real Cost : 114.65
+==================================================
+Day39
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(72.0)->  9Node8e(79.0)->  9Node6e(60.7)->  9Node5e(86.7)->->  9Node0e(109.7)
+	Predicted Cost : 109.7
+	Real Cost : 103.5
+IDA*: 
+	Visited Nodes Number(total) : 56
+	Visited Nodes Number(last iteration) : 13
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(72.0)->  9Node8e(79.0)->  9Node6e(60.7)->  9Node5e(86.7)->->  9Node0e(109.7)
+	Predicted Cost : 109.7
+	Real Cost : 103.5
+==================================================
+Day40
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(58.5)->  9Node1e(67.5)->  9Node7e(81.5)->  9Node8e(88.5)->  9Node6e(70.0)->  9Node5e(93.4)->->  9Node0e(116.4)
+	Predicted Cost : 116.4
+	Real Cost : 125.5
+IDA*: 
+	Visited Nodes Number(total) : 109
+	Visited Nodes Number(last iteration) : 16
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(58.5)->  9Node1e(67.5)->  9Node7e(81.5)->  9Node8e(88.5)->  9Node6e(70.0)->  9Node5e(93.4)->->  9Node0e(116.4)
+	Predicted Cost : 116.4
+	Real Cost : 125.5
+==================================================
+Day41
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(75.5)->  9Node6e(65.25)->  9Node3e(83.0)->  9Node8e(86.5)->  9Node5e(88.65)->->  9Node0e(109.35000000000001)
+	Predicted Cost : 109.35000000000001
+	Real Cost : 123.75
+IDA*: 
+	Visited Nodes Number(total) : 43
+	Visited Nodes Number(last iteration) : 12
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(75.5)->  9Node6e(65.25)->  9Node3e(83.0)->  9Node8e(86.5)->  9Node5e(88.65)->->  9Node0e(109.35000000000001)
+	Predicted Cost : 109.35000000000001
+	Real Cost : 123.75
+==================================================
+Day42
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(13.75)->  9Node4e(61.25)->  9Node1e(70.25)->  9Node6e(66.85)->  9Node3e(80.35)->  9Node7e(87.75)->  9Node8e(91.25)->  9Node5e(92.85)->->  9Node0e(115.85)
+	Predicted Cost : 115.85
+	Real Cost : 128.85
+IDA*: 
+	Visited Nodes Number(total) : 89
+	Visited Nodes Number(last iteration) : 16
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(13.75)->  9Node4e(61.25)->  9Node1e(70.25)->  9Node6e(66.85)->  9Node3e(80.35)->  9Node7e(87.75)->  9Node8e(91.25)->  9Node5e(92.85)->->  9Node0e(115.85)
+	Predicted Cost : 115.85
+	Real Cost : 128.85
+==================================================
+Day43
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(72.0)->  9Node6e(65.25)->  9Node3e(79.6)->  9Node8e(86.5)->  9Node5e(91.25)->->  9Node0e(114.25)
+	Predicted Cost : 114.25
+	Real Cost : 128.45
+IDA*: 
+	Visited Nodes Number(total) : 101
+	Visited Nodes Number(last iteration) : 16
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(72.0)->  9Node6e(65.25)->  9Node3e(79.6)->  9Node8e(86.5)->  9Node5e(91.25)->->  9Node0e(114.25)
+	Predicted Cost : 114.25
+	Real Cost : 128.45
+==================================================
+Day44
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(58.5)->  9Node1e(67.5)->  9Node6e(64.1)->  9Node3e(77.6)->  9Node7e(81.5)->  9Node5e(87.5)->  9Node8e(88.5)->->  9Node0e(110.5)
+	Predicted Cost : 110.5
+	Real Cost : 125.5
+IDA*: 
+	Visited Nodes Number(total) : 70
+	Visited Nodes Number(last iteration) : 14
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(58.5)->  9Node1e(67.5)->  9Node6e(64.1)->  9Node3e(77.6)->  9Node7e(81.5)->  9Node5e(87.5)->  9Node8e(88.5)->->  9Node0e(110.5)
+	Predicted Cost : 110.5
+	Real Cost : 125.5
+==================================================
+Day45
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node6e(62.0)->  9Node7e(75.5)->  9Node5e(85.4)->  9Node8e(86.5)->->  9Node0e(108.4)
+	Predicted Cost : 108.4
+	Real Cost : 104.8
+IDA*: 
+	Visited Nodes Number(total) : 70
+	Visited Nodes Number(last iteration) : 14
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node6e(62.0)->  9Node7e(75.5)->  9Node5e(85.4)->  9Node8e(86.5)->->  9Node0e(108.4)
+	Predicted Cost : 108.4
+	Real Cost : 104.8
+==================================================
+Day46
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(45.2)->  9Node1e(53.300000000000004)->  9Node6e(58.2)->  9Node7e(65.9)->  9Node5e(81.6)->  9Node3e(80.9)->  9Node8e(82.7)->->  9Node0e(104.6)
+	Predicted Cost : 104.6
+	Real Cost : 108.4
+IDA*: 
+	Visited Nodes Number(total) : 43
+	Visited Nodes Number(last iteration) : 12
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(45.2)->  9Node1e(53.300000000000004)->  9Node6e(58.2)->  9Node7e(65.9)->  9Node5e(81.6)->  9Node3e(80.9)->  9Node8e(82.7)->->  9Node0e(104.6)
+	Predicted Cost : 104.6
+	Real Cost : 108.4
+==================================================
+Day47
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(72.0)->  9Node6e(62.0)->  9Node3e(77.6)->  9Node8e(79.0)->  9Node5e(88.0)->->  9Node0e(111.0)
+	Predicted Cost : 111.0
+	Real Cost : 108.4
+IDA*: 
+	Visited Nodes Number(total) : 72
+	Visited Nodes Number(last iteration) : 15
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(72.0)->  9Node6e(62.0)->  9Node3e(77.6)->  9Node8e(79.0)->  9Node5e(88.0)->->  9Node0e(111.0)
+	Predicted Cost : 111.0
+	Real Cost : 108.4
+==================================================
+Day48
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(9.9)->  9Node4e(47.9)->  9Node1e(56.0)->  9Node7e(70.0)->  9Node8e(77.9)->  9Node6e(59.599999999999994)->  9Node5e(85.6)->->  9Node0e(108.6)
+	Predicted Cost : 108.6
+	Real Cost : 126.9
+IDA*: 
+	Visited Nodes Number(total) : 70
+	Visited Nodes Number(last iteration) : 14
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(9.9)->  9Node4e(47.9)->  9Node1e(56.0)->  9Node7e(70.0)->  9Node8e(77.9)->  9Node6e(59.599999999999994)->  9Node5e(85.6)->->  9Node0e(108.6)
+	Predicted Cost : 108.6
+	Real Cost : 126.9
+==================================================
+Day49
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(58.5)->  9Node1e(67.5)->  9Node7e(80.1)->  9Node6e(71.5)->  9Node3e(84.65)->  9Node8e(96.0)->  9Node5e(97.5)->->  9Node0e(120.5)
+	Predicted Cost : 120.5
+	Real Cost : 106.0
+IDA*: 
+	Visited Nodes Number(total) : 133
+	Visited Nodes Number(last iteration) : 17
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(58.5)->  9Node1e(67.5)->  9Node7e(80.1)->  9Node6e(71.5)->  9Node3e(84.65)->  9Node8e(96.0)->  9Node5e(97.5)->->  9Node0e(120.5)
+	Predicted Cost : 120.5
+	Real Cost : 106.0
+==================================================
+Day50
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(70.6)->  9Node8e(76.0)->  9Node6e(60.7)->  9Node5e(84.1)->->  9Node0e(107.1)
+	Predicted Cost : 107.1
+	Real Cost : 107.2
+IDA*: 
+	Visited Nodes Number(total) : 43
+	Visited Nodes Number(last iteration) : 12
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(70.6)->  9Node8e(76.0)->  9Node6e(60.7)->  9Node5e(84.1)->->  9Node0e(107.1)
+	Predicted Cost : 107.1
+	Real Cost : 107.2
+==================================================
+Day51
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(58.5)->  9Node1e(67.5)->  9Node6e(70.0)->  9Node3e(82.85)->  9Node7e(85.0)->  9Node8e(88.5)->  9Node5e(96.0)->->  9Node0e(119.0)
+	Predicted Cost : 119.0
+	Real Cost : 113.1
+IDA*: 
+	Visited Nodes Number(total) : 126
+	Visited Nodes Number(last iteration) : 17
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(58.5)->  9Node1e(67.5)->  9Node6e(70.0)->  9Node3e(82.85)->  9Node7e(85.0)->  9Node8e(88.5)->  9Node5e(96.0)->->  9Node0e(119.0)
+	Predicted Cost : 119.0
+	Real Cost : 113.1
+==================================================
+Day52
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(70.6)->  9Node8e(76.0)->  9Node6e(60.7)->  9Node5e(84.1)->->  9Node0e(107.1)
+	Predicted Cost : 107.1
+	Real Cost : 116.6
+IDA*: 
+	Visited Nodes Number(total) : 70
+	Visited Nodes Number(last iteration) : 14
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(70.6)->  9Node8e(76.0)->  9Node6e(60.7)->  9Node5e(84.1)->->  9Node0e(107.1)
+	Predicted Cost : 107.1
+	Real Cost : 116.6
+==================================================
+Day53
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(57.1)->  9Node6e(62.0)->  9Node7e(71.1)->  9Node5e(85.4)->  9Node3e(84.6)->  9Node8e(86.5)->->  9Node0e(108.4)
+	Predicted Cost : 108.4
+	Real Cost : 112.4
+IDA*: 
+	Visited Nodes Number(total) : 56
+	Visited Nodes Number(last iteration) : 13
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(57.1)->  9Node6e(62.0)->  9Node7e(71.1)->  9Node5e(85.4)->  9Node3e(84.6)->  9Node8e(86.5)->->  9Node0e(108.4)
+	Predicted Cost : 108.4
+	Real Cost : 112.4
+==================================================
+Day54
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(9.9)->  9Node4e(44.1)->  9Node1e(52.2)->  9Node7e(66.2)->  9Node8e(71.1)->  9Node6e(55.8)->  9Node5e(81.8)->->  9Node0e(104.8)
+	Predicted Cost : 104.8
+	Real Cost : 104.6
+IDA*: 
+	Visited Nodes Number(total) : 56
+	Visited Nodes Number(last iteration) : 13
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(9.9)->  9Node4e(44.1)->  9Node1e(52.2)->  9Node7e(66.2)->  9Node8e(71.1)->  9Node6e(55.8)->  9Node5e(81.8)->->  9Node0e(104.8)
+	Predicted Cost : 104.8
+	Real Cost : 104.6
+==================================================
+Day55
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(9.9)->  9Node4e(44.1)->  9Node1e(55.35)->  9Node7e(67.95)->  9Node8e(74.1)->  9Node6e(57.1)->  9Node5e(80.5)->->  9Node0e(103.5)
+	Predicted Cost : 103.5
+	Real Cost : 104.8
+IDA*: 
+	Visited Nodes Number(total) : 43
+	Visited Nodes Number(last iteration) : 12
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(9.9)->  9Node4e(44.1)->  9Node1e(55.35)->  9Node7e(67.95)->  9Node8e(74.1)->  9Node6e(57.1)->  9Node5e(80.5)->->  9Node0e(103.5)
+	Predicted Cost : 103.5
+	Real Cost : 104.8
+==================================================
+Day56
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(45.2)->  9Node1e(54.2)->  9Node6e(58.2)->  9Node7e(66.8)->  9Node5e(81.6)->  9Node3e(75.80000000000001)->  9Node8e(82.7)->->  9Node0e(104.6)
+	Predicted Cost : 104.6
+	Real Cost : 106.75
+IDA*: 
+	Visited Nodes Number(total) : 56
+	Visited Nodes Number(last iteration) : 13
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(45.2)->  9Node1e(54.2)->  9Node6e(58.2)->  9Node7e(66.8)->  9Node5e(81.6)->  9Node3e(75.80000000000001)->  9Node8e(82.7)->->  9Node0e(104.6)
+	Predicted Cost : 104.6
+	Real Cost : 106.75
+==================================================
+Day57
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(58.5)->  9Node1e(67.5)->  9Node6e(70.0)->  9Node3e(79.1)->  9Node7e(85.0)->  9Node8e(96.0)->  9Node5e(102.5)->->  9Node0e(119.6)
+	Predicted Cost : 119.6
+	Real Cost : 127.0
+IDA*: 
+	Visited Nodes Number(total) : 116
+	Visited Nodes Number(last iteration) : 16
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(58.5)->  9Node1e(67.5)->  9Node6e(70.0)->  9Node3e(79.1)->  9Node7e(85.0)->  9Node8e(96.0)->  9Node5e(102.5)->->  9Node0e(119.6)
+	Predicted Cost : 119.6
+	Real Cost : 127.0
+==================================================
+Day58
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(70.6)->  9Node8e(79.0)->  9Node6e(62.0)->  9Node5e(85.4)->->  9Node0e(108.4)
+	Predicted Cost : 108.4
+	Real Cost : 117.9
+IDA*: 
+	Visited Nodes Number(total) : 85
+	Visited Nodes Number(last iteration) : 15
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(70.6)->  9Node8e(79.0)->  9Node6e(62.0)->  9Node5e(85.4)->->  9Node0e(108.4)
+	Predicted Cost : 108.4
+	Real Cost : 117.9
+==================================================
+Day59
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(45.2)->  9Node1e(54.2)->  9Node7e(66.8)->  9Node6e(56.900000000000006)->  9Node3e(75.80000000000001)->  9Node8e(82.7)->  9Node5e(82.9)->->  9Node0e(111.65)
+	Predicted Cost : 111.65
+	Real Cost : 106.10000000000001
+IDA*: 
+	Visited Nodes Number(total) : 85
+	Visited Nodes Number(last iteration) : 15
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(45.2)->  9Node1e(54.2)->  9Node7e(66.8)->  9Node6e(56.900000000000006)->  9Node3e(75.80000000000001)->  9Node8e(82.7)->  9Node5e(82.9)->->  9Node0e(111.65)
+	Predicted Cost : 111.65
+	Real Cost : 106.10000000000001
+==================================================
+Day60
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(45.2)->  9Node1e(54.2)->  9Node7e(68.2)->  9Node8e(75.2)->  9Node6e(58.2)->  9Node5e(84.2)->->  9Node0e(107.2)
+	Predicted Cost : 107.2
+	Real Cost : 109.05000000000001
+IDA*: 
+	Visited Nodes Number(total) : 43
+	Visited Nodes Number(last iteration) : 12
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(45.2)->  9Node1e(54.2)->  9Node7e(68.2)->  9Node8e(75.2)->  9Node6e(58.2)->  9Node5e(84.2)->->  9Node0e(107.2)
+	Predicted Cost : 107.2
+	Real Cost : 109.05000000000001
+==================================================
+Day61
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(45.2)->  9Node1e(54.2)->  9Node7e(68.2)->  9Node8e(72.2)->  9Node6e(61.45)->  9Node5e(83.0)->->  9Node0e(111.75)
+	Predicted Cost : 111.75
+	Real Cost : 112.8
+IDA*: 
+	Visited Nodes Number(total) : 85
+	Visited Nodes Number(last iteration) : 15
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(45.2)->  9Node1e(54.2)->  9Node7e(68.2)->  9Node8e(72.2)->  9Node6e(61.45)->  9Node5e(83.0)->->  9Node0e(111.75)
+	Predicted Cost : 111.75
+	Real Cost : 112.8
+==================================================
+Day62
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(58.5)->  9Node1e(67.5)->  9Node7e(80.1)->  9Node8e(85.5)->  9Node6e(71.5)->  9Node5e(94.9)->->  9Node0e(118.7)
+	Predicted Cost : 118.7
+	Real Cost : 134.6
+IDA*: 
+	Visited Nodes Number(total) : 97
+	Visited Nodes Number(last iteration) : 16
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(58.5)->  9Node1e(67.5)->  9Node7e(80.1)->  9Node8e(85.5)->  9Node6e(71.5)->  9Node5e(94.9)->->  9Node0e(118.7)
+	Predicted Cost : 118.7
+	Real Cost : 134.6
+==================================================
+Day63
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(13.75)->  9Node4e(51.75)->  9Node1e(59.85)->  9Node7e(72.45)->  9Node6e(63.45)->  9Node3e(83.85)->  9Node8e(89.25)->  9Node5e(89.45)->->  9Node0e(112.45)
+	Predicted Cost : 112.45
+	Real Cost : 126.9
+IDA*: 
+	Visited Nodes Number(total) : 101
+	Visited Nodes Number(last iteration) : 16
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(13.75)->  9Node4e(51.75)->  9Node1e(59.85)->  9Node7e(72.45)->  9Node6e(63.45)->  9Node3e(83.85)->  9Node8e(89.25)->  9Node5e(89.45)->->  9Node0e(112.45)
+	Predicted Cost : 112.45
+	Real Cost : 126.9
+==================================================
+Day64
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(9.9)->  9Node4e(47.9)->  9Node1e(56.9)->  9Node7e(74.4)->  9Node8e(74.9)->  9Node6e(63.0)->  9Node5e(86.4)->->  9Node0e(109.4)
+	Predicted Cost : 109.4
+	Real Cost : 121.75
+IDA*: 
+	Visited Nodes Number(total) : 70
+	Visited Nodes Number(last iteration) : 14
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(9.9)->  9Node4e(47.9)->  9Node1e(56.9)->  9Node7e(74.4)->  9Node8e(74.9)->  9Node6e(63.0)->  9Node5e(86.4)->->  9Node0e(109.4)
+	Predicted Cost : 109.4
+	Real Cost : 121.75
+==================================================
+Day65
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(60.25)->  9Node7e(72.85)->  9Node8e(76.0)->  9Node6e(64.1)->  9Node5e(87.5)->->  9Node0e(110.5)
+	Predicted Cost : 110.5
+	Real Cost : 112.0
+IDA*: 
+	Visited Nodes Number(total) : 58
+	Visited Nodes Number(last iteration) : 14
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(60.25)->  9Node7e(72.85)->  9Node8e(76.0)->  9Node6e(64.1)->  9Node5e(87.5)->->  9Node0e(110.5)
+	Predicted Cost : 110.5
+	Real Cost : 112.0
+==================================================
+Day66
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(45.2)->  9Node1e(54.2)->  9Node7e(71.7)->  9Node8e(72.2)->  9Node6e(58.2)->  9Node5e(81.6)->->  9Node0e(104.6)
+	Predicted Cost : 104.6
+	Real Cost : 111.65
+IDA*: 
+	Visited Nodes Number(total) : 56
+	Visited Nodes Number(last iteration) : 13
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(45.2)->  9Node1e(54.2)->  9Node7e(71.7)->  9Node8e(72.2)->  9Node6e(58.2)->  9Node5e(81.6)->->  9Node0e(104.6)
+	Predicted Cost : 104.6
+	Real Cost : 111.65
+==================================================
+Day67
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(9.9)->  9Node4e(44.1)->  9Node1e(53.1)->  9Node7e(65.7)->  9Node6e(55.8)->  9Node3e(78.1)->  9Node8e(81.6)->  9Node5e(81.8)->->  9Node0e(104.8)
+	Predicted Cost : 104.8
+	Real Cost : 107.2
+IDA*: 
+	Visited Nodes Number(total) : 56
+	Visited Nodes Number(last iteration) : 13
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(9.9)->  9Node4e(44.1)->  9Node1e(53.1)->  9Node7e(65.7)->  9Node6e(55.8)->  9Node3e(78.1)->  9Node8e(81.6)->  9Node5e(81.8)->->  9Node0e(104.8)
+	Predicted Cost : 104.8
+	Real Cost : 107.2
+==================================================
+Day68
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(13.75)->  9Node4e(61.25)->  9Node1e(70.25)->  9Node6e(72.75)->  9Node7e(87.75)->  9Node5e(98.75)->  9Node3e(92.25)->  9Node8e(98.75)->->  9Node0e(119.6)
+	Predicted Cost : 119.6
+	Real Cost : 133.1
+IDA*: 
+	Visited Nodes Number(total) : 106
+	Visited Nodes Number(last iteration) : 16
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(13.75)->  9Node4e(61.25)->  9Node1e(70.25)->  9Node6e(72.75)->  9Node7e(87.75)->  9Node5e(98.75)->  9Node3e(92.25)->  9Node8e(98.75)->->  9Node0e(119.6)
+	Predicted Cost : 119.6
+	Real Cost : 133.1
+==================================================
+Day69
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(58.5)->  9Node1e(67.5)->  9Node7e(80.1)->  9Node6e(70.0)->  9Node3e(92.5)->  9Node8e(96.0)->  9Node5e(96.0)->->  9Node0e(119.0)
+	Predicted Cost : 119.0
+	Real Cost : 119.15
+IDA*: 
+	Visited Nodes Number(total) : 108
+	Visited Nodes Number(last iteration) : 16
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(58.5)->  9Node1e(67.5)->  9Node7e(80.1)->  9Node6e(70.0)->  9Node3e(92.5)->  9Node8e(96.0)->  9Node5e(96.0)->->  9Node0e(119.0)
+	Predicted Cost : 119.0
+	Real Cost : 119.15
+==================================================
+Day70
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(58.5)->  9Node1e(67.5)->  9Node6e(70.0)->  9Node3e(77.6)->  9Node7e(80.1)->  9Node8e(85.5)->  9Node5e(93.4)->->  9Node0e(116.4)
+	Predicted Cost : 116.4
+	Real Cost : 119.0
+IDA*: 
+	Visited Nodes Number(total) : 126
+	Visited Nodes Number(last iteration) : 17
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(58.5)->  9Node1e(67.5)->  9Node6e(70.0)->  9Node3e(77.6)->  9Node7e(80.1)->  9Node8e(85.5)->  9Node5e(93.4)->->  9Node0e(116.4)
+	Predicted Cost : 116.4
+	Real Cost : 119.0
+==================================================
+Day71
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(13.75)->  9Node4e(61.25)->  9Node1e(70.25)->  9Node7e(82.85)->  9Node8e(91.25)->  9Node6e(72.75)->  9Node5e(102.05)->->  9Node0e(125.05)
+	Predicted Cost : 125.05
+	Real Cost : 113.2
+IDA*: 
+	Visited Nodes Number(total) : 126
+	Visited Nodes Number(last iteration) : 17
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(13.75)->  9Node4e(61.25)->  9Node1e(70.25)->  9Node7e(82.85)->  9Node8e(91.25)->  9Node6e(72.75)->  9Node5e(102.05)->->  9Node0e(125.05)
+	Predicted Cost : 125.05
+	Real Cost : 113.2
+==================================================
+Day72
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(13.75)->  9Node4e(51.75)->  9Node1e(60.75)->  9Node6e(64.75)->  9Node7e(73.35)->  9Node5e(88.15)->  9Node3e(84.25)->  9Node8e(89.25)->->  9Node0e(111.15)
+	Predicted Cost : 111.15
+	Real Cost : 119.7
+IDA*: 
+	Visited Nodes Number(total) : 85
+	Visited Nodes Number(last iteration) : 15
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(13.75)->  9Node4e(51.75)->  9Node1e(60.75)->  9Node6e(64.75)->  9Node7e(73.35)->  9Node5e(88.15)->  9Node3e(84.25)->  9Node8e(89.25)->->  9Node0e(111.15)
+	Predicted Cost : 111.15
+	Real Cost : 119.7
+==================================================
+Day73
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(60.25)->  9Node7e(74.25)->  9Node8e(79.0)->  9Node6e(62.0)->  9Node5e(88.0)->->  9Node0e(108.7)
+	Predicted Cost : 108.7
+	Real Cost : 126.4
+IDA*: 
+	Visited Nodes Number(total) : 56
+	Visited Nodes Number(last iteration) : 13
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(60.25)->  9Node7e(74.25)->  9Node8e(79.0)->  9Node6e(62.0)->  9Node5e(88.0)->->  9Node0e(108.7)
+	Predicted Cost : 108.7
+	Real Cost : 126.4
+==================================================
+Day74
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(58.5)->  9Node1e(66.6)->  9Node7e(80.6)->  9Node8e(85.5)->  9Node6e(70.0)->  9Node5e(96.0)->->  9Node0e(116.7)
+	Predicted Cost : 116.7
+	Real Cost : 117.3
+IDA*: 
+	Visited Nodes Number(total) : 116
+	Visited Nodes Number(last iteration) : 16
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(58.5)->  9Node1e(66.6)->  9Node7e(80.6)->  9Node8e(85.5)->  9Node6e(70.0)->  9Node5e(96.0)->->  9Node0e(116.7)
+	Predicted Cost : 116.7
+	Real Cost : 117.3
+==================================================
+Day75
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(13.75)->  9Node4e(47.95)->  9Node1e(56.95)->  9Node7e(70.95)->  9Node8e(77.95)->  9Node6e(60.95)->  9Node5e(84.35)->->  9Node0e(107.35)
+	Predicted Cost : 107.35
+	Real Cost : 124.7
+IDA*: 
+	Visited Nodes Number(total) : 78
+	Visited Nodes Number(last iteration) : 15
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(13.75)->  9Node4e(47.95)->  9Node1e(56.95)->  9Node7e(70.95)->  9Node8e(77.95)->  9Node6e(60.95)->  9Node5e(84.35)->->  9Node0e(107.35)
+	Predicted Cost : 107.35
+	Real Cost : 124.7
+==================================================
+Day76
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(75.5)->  9Node6e(62.0)->  9Node3e(77.6)->  9Node8e(79.0)->  9Node5e(85.4)->->  9Node0e(108.4)
+	Predicted Cost : 108.4
+	Real Cost : 113.1
+IDA*: 
+	Visited Nodes Number(total) : 70
+	Visited Nodes Number(last iteration) : 14
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(75.5)->  9Node6e(62.0)->  9Node3e(77.6)->  9Node8e(79.0)->  9Node5e(85.4)->->  9Node0e(108.4)
+	Predicted Cost : 108.4
+	Real Cost : 113.1
+==================================================
+Day77
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(70.6)->  9Node8e(79.0)->  9Node6e(62.0)->  9Node5e(85.4)->->  9Node0e(114.15)
+	Predicted Cost : 114.15
+	Real Cost : 108.4
+IDA*: 
+	Visited Nodes Number(total) : 101
+	Visited Nodes Number(last iteration) : 16
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(70.6)->  9Node8e(79.0)->  9Node6e(62.0)->  9Node5e(85.4)->->  9Node0e(114.15)
+	Predicted Cost : 114.15
+	Real Cost : 108.4
+==================================================
+Day78
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(70.6)->  9Node8e(79.0)->  9Node6e(62.0)->  9Node5e(85.4)->->  9Node0e(114.15)
+	Predicted Cost : 114.15
+	Real Cost : 126.25
+IDA*: 
+	Visited Nodes Number(total) : 101
+	Visited Nodes Number(last iteration) : 16
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(49.0)->  9Node1e(58.0)->  9Node7e(70.6)->  9Node8e(79.0)->  9Node6e(62.0)->  9Node5e(85.4)->->  9Node0e(114.15)
+	Predicted Cost : 114.15
+	Real Cost : 126.25
+==================================================
+Day79
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(58.5)->  9Node1e(67.5)->  9Node7e(81.5)->  9Node8e(85.5)->  9Node6e(70.0)->  9Node5e(96.0)->->  9Node0e(119.0)
+	Predicted Cost : 119.0
+	Real Cost : 118.85
+IDA*: 
+	Visited Nodes Number(total) : 109
+	Visited Nodes Number(last iteration) : 16
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(11.0)->  9Node4e(58.5)->  9Node1e(67.5)->  9Node7e(81.5)->  9Node8e(85.5)->  9Node6e(70.0)->  9Node5e(96.0)->->  9Node0e(119.0)
+	Predicted Cost : 119.0
+	Real Cost : 118.85
+==================================================
+Day80
+<Depth First Search Algorithm>: 
+	Visited Nodes Number : 38 out of 39
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(13.75)->  9Node4e(47.95)->  9Node1e(56.95)->  9Node7e(69.55)->  9Node8e(74.95)->  9Node6e(59.650000000000006)->  9Node5e(83.05000000000001)->->  9Node0e(106.05000000000001)
+	Predicted Cost : 106.05000000000001
+	Real Cost : 115.85
+IDA*: 
+	Visited Nodes Number(total) : 43
+	Visited Nodes Number(last iteration) : 12
+	Path(with error -- see report --)   10Node9e(0.0)->  10Node3e(13.75)->  9Node4e(47.95)->  9Node1e(56.95)->  9Node7e(69.55)->  9Node8e(74.95)->  9Node6e(59.650000000000006)->  9Node5e(83.05000000000001)->->  9Node0e(106.05000000000001)
+	Predicted Cost : 106.05000000000001
+	Real Cost : 115.85

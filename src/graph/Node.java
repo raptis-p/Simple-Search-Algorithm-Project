@@ -14,8 +14,19 @@ public class Node {
 	private ArrayList<Node> neighbors;
 	private ArrayList<Node> pathFromSrc;
 	private double cost;
+	private double realCost;
 	
 	
+	public double getRealCost() {
+		return realCost;
+	}
+
+
+	public void setRealCost(double realCost) {
+		this.realCost = realCost;
+	}
+
+
 	private double heuristic;
 	
 	//Constructors
@@ -92,6 +103,7 @@ public class Node {
 	public void resetNodePathAndCost() {
 		this.pathFromSrc.clear();
 		this.cost = 0;
+		this.realCost = 0;
 		this.isVisited=false;
 	}
 	

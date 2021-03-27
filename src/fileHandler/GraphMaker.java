@@ -25,9 +25,9 @@ public class GraphMaker {
 	
 	//Constructor of GraphMaker
 	public GraphMaker(String filename) throws FileNotFoundException {
-		FileHandler fH = FileHandler.getFileHandler(filename);
+		FileHandler fH = new FileHandler(filename);
 		fH.instansiateReader();
-		rdr = FileHandler.getBuffReader();
+		rdr = fH.getBuffReader();
 	}
 	
 	

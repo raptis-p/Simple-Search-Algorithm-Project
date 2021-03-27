@@ -24,11 +24,13 @@ public class IDAstar {
 //		optimalPath = new ArrayList<Edge> ();
 		block = g.getNodesList().size();
 		minCost = Double.MAX_VALUE;
-		g.calculateHeuristic();
+		//g.calculateHeuristic();
 		Comparator<Node> comparator = new NodeComparator();
 		PriorityQueue<Node> queue = new PriorityQueue<Node>(comparator);
 		Node srcNode = g.getSrcNode(), current;
 		Node goal = g.getDestNode();
+		srcNode.setCost(0);
+		srcNode.setRealCost(0);
 		threshold = srcNode.getHeuristic() + srcNode.getCost();
 		
 		queue.add(srcNode);
@@ -38,6 +40,24 @@ public class IDAstar {
 			
 			current = queue.remove();
 //			System.out.println(current.getName());
+			
+			if (current.getName().equals(goal.getName())) {
+				count++;
+//				if(current.getCost()>=minCost)
+//				{
+//					continue;
+//				}
+				
+				minCost=current.getCost();
+//				System.out.println("GOAL");
+//				System.out.println(current.getCost());
+				break;
+				
+			
+				
+			}
+			
+			
 			if (current.getHeuristic() + current.getCost() > threshold) {
 //				System.out.println("fjwe8ifje");
 				threshold = current.getHeuristic() + current.getCost();
@@ -50,24 +70,10 @@ public class IDAstar {
 			current.addPath(current);
 			//System.out.println("Getting from queue: " + current.getName() + "isVisited: " + current.isVisited());
 			//IF we find goal
-			if (current.getName().equals(goal.getName())) {
-				count++;
-				if(current.getCost()>=minCost)
-				{
-					continue;
-				}
-				
-				minCost=current.getCost();
-//				System.out.println("GOAL");
-//				System.out.println(current.getCost());
-				break;
-				
-			
-				
-			}
+		
 			
 			if (!current.isVisited()) {
-				//System.out.println(current.getName() + " just visited");
+//				System.out.println(current.getName() + " just visited");
 				current.setVisited(true);
 				nodesVisited1++;
 				nodesVisited2++;
