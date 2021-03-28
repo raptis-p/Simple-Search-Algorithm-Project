@@ -224,7 +224,7 @@ public class MainClass {
 		for (Node n : path) {
 			s+= " " + n.getName()+"(" + n.getCost() +")" + "->";
 		}
-		s = s+ "-> " + g.getDestNode().getName() + "(" + g.getDestNode().getCost() + ")";
+		s = s + g.getDestNode().getName() + "(" + g.getDestNode().getCost() + ")";
 		return s;
 	}
 }

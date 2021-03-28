@@ -17,6 +17,12 @@ public class Node {
 	private double realCost;
 	
 	
+	
+	
+	
+	
+	
+	
 	public double getRealCost() {
 		return realCost;
 	}
